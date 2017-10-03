@@ -1,0 +1,32 @@
+<div class="container">
+<form action="/Trabajador/create" method="POST" accept-charset="utf-8" class="form-singin">
+	<label>Nombre(s)</label>
+	<input type="text" name="nombre" class="form-control" value="<%= Trabajador.Nombre%>" required  >
+	<label>Apellido Paterno</label>
+	<input type="text" name="apaterno" class="form-control" value="<%= Trabajador.ApPaterno%>" required>
+	<label>Apellido Materno</label>
+	<input type="text" name="amaterno" class="form-control" value="<%= Trabajador.ApMaterno%>" required>
+	<label>Fecha Nacimiento</label>
+	<input type="text" name="fnacimiento" class="form-control" value="<%= Trabajador.FechaNac%>" required>
+	<label>Lugar de Nacimiento</label>
+	<input type="text" name="lnacimiento" class="form-control" value="<%= Trabajador.LugarNac%>" required>
+	<label>CURP</label>
+	<input type="text" name="curp" class="form-control" value="<%= Trabajador.CURP%>" required>
+	<label>Grupo Sanguineo</label>
+	<input type="text" name="sangre" class="form-control" value="<%= Trabajador.GpoSanguineo%>" required>
+	<label>RH</label>
+	<input type="text" name="rh" class="form-control" value="<%= Trabajador.RH%>" required>
+	<label>Telefono</label>
+	<input type="text" name="telefono" class="form-control" value="<%= Trabajador.TelCasa%>" required>
+	<label>Celular</label>
+	<input type="text" name="celular" class="form-control" value="<%= Trabajador.Cel%>" required>
+	<label>Rol</label>
+	<input type="text" name="rol" class="form-control" value="<%= Trabajador.Rol%>" required>
+	<label>Numero de Empleado</label>
+	<input type="text" name="numempleado" class="form-control" value="<%= Trabajador.NumEmpleado%>" required>
+	<label>Puesto</label>
+	<input type="text" name="puesto" class="form-control" value="<%= Trabajador.Puesto%>" required>
+	<br>
+	<input type="submit" name="create" class="btn btn-default"/>
+</form>
+</div>

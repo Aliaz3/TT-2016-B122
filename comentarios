@@ -1,0 +1,6 @@
+Notas
+- No dejar espacios en archivos o carpetas de las vistas. 
+- Longitud maxima de caracteres para ambas 25-30 caracteres.
+- Se agregaron todas las rutas al archivo routes de forma no practica corregir despues.
+- En caso de necesitar espacios usar '-'; tambien cuenta para el total de caracteres.
+- 
