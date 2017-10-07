@@ -33,115 +33,115 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: '/static/index'
+    view: 'static/index'
   },
   '/admini/AdmiListadoPadre':{
-    view: '/admini/AdmiListadoPadre'
+    view: 'admini/AdmiListadoPadre'
   },
   '/admini/AdmiListadoPersonaAutorizada':{
-    view: '/admini/AdmiListadoPersonaAutorizada'
+    view: 'admini/AdmiListadoPersonaAutorizada'
   },
   '/admini/AdmiListadoDerechohabiente':{
-    view: '/admini/AdmiListadoDerechohabiente'
+    view: 'admini/AdmiListadoDerechohabiente'
   },
   '/admini/AdminGraficas':{
-    view: '/admini/AdminGraficas'
+    view: 'admini/AdminGraficas'
   },
-  '/admini/AdminListadoNiño':{
-    view: '/admini/AdminListadoNiño'
+  '/admini/AdminListadoNiños':{
+    view: 'admini/AdminListadoNiños'
   },
   '/admini/BienvenidaAdmin':{
-    view: '/admini/BienvenidaAdmin'
+    view: 'admini/BienvenidaAdmin'
   },
   '/servicioMedico/Bienvenidadra':{
-    view: '/servicioMedico/Bienvenidadra'
+    view: 'servicioMedico/Bienvenidadra'
   },
   '/servicioMedico/AgregarNuevaDosisMedico':{
-    view: '/servicioMedico/AgregarNuevaDosisMedico'
+    view: 'servicioMedico/AgregarNuevaDosisMedico'
   },
   '/servicioMedico/FAC48':{
-    view: '/servicioMedico/FAC38'
+    view: 'servicioMedico/FAC48'
   },
   '/servicioMedico/FAC49':{
-    view: '/servicioMedico/FAC49'
+    view: 'servicioMedico/FAC49'
   },
   '/servicioMedico/FAC50':{
-    view: '/servicioMedico/FAC50'
+    view: 'servicioMedico/FAC50'
   },
   '/servicioMedico/FAC51':{
-    view: '/servicioMedico/FAC51'
+    view: 'servicioMedico/FAC51'
   },
   '/servicioMedico/FAC71':{
-    view: '/servicioMedico/FAC71'
+    view: 'servicioMedico/FAC71'
   },
   '/servicioMedico/FAC90':{
-    view: '/servicioMedico/FAC90'
+    view: 'servicioMedico/FAC90'
   },
   '/servicioMedico/FAC98':{
-    view: '/servicioMedico/FAC98'
+    view: 'servicioMedico/FAC98'
   },
   '/Session/new':{
-    view:'/Session/new'
+    view:'Session/new'
   },
   '/ss/BienvenidaTS':{
-    view: '/ss/BienvenidaTS'
+    view: 'ss/BienvenidaTS'
   },
   '/ss/FAC11':{
-    view: '/ss/FAC11'
+    view: 'ss/FAC11'
   },
   '/ss/FAC13':{
-    view: '/ss/FAC13'
+    view: 'ss/FAC13'
   },
   '/ss/FAC14':{
-    view: '/ss/FAC14'
+    view: 'ss/FAC14'
   },
   '/ss/FAC144':{
-    view: '/ss/FAC144'
+    view: 'ss/FAC144'
   },
   '/ss/FAC130':{
-    view: '/ss/FAC130'
+    view: 'ss/FAC130'
   },
   '/ss/FAC131':{
-    view: '/ss/FAC131'
+    view: 'ss/FAC131'
   },
   '/ss/nuevoRepDiarioTS':{
-    view: '/ss/nuevoRepDiarioTS'
+    view: 'ss/nuevoRepDiarioTS'
   },
   '/ss/nuevoRepMens':{
-    view: '/ss/nuevoRepMens'
+    view: 'ss/nuevoRepMens'
   },
   '/ss/paginaprincipal':{
-    view: '/ss/paginaprincipal'
+    view: 'ss/paginaprincipal'
   },
   '/ss/pantallaInicial':{
-    view: '/ss/pantallaInicial'
+    view: 'ss/pantallaInicial'
   },
   '/ss/ReporteDiarioTS':{
-    view: '/ss/ReporteDiarioTS'
+    view: 'ss/ReporteDiarioTS'
   },
   '/ss/ReporteMensualTS':{
-    view: '/ss/ReporteMensualTS'
+    view: 'ss/ReporteMensualTS'
   },
   '/ss/ReportesDiarios':{
-    view: '/ss/ReportesDiarios'
+    view: 'ss/ReportesDiarios'
   },
   '/ss/ReportesMensuales':{
-    view: '/ss/ReportesMensuales'
+    view: 'ss/ReportesMensuales'
   },
   '/Trabajador/edit':{
-    view: '/Trabajador/edit'
+    view: 'Trabajador/edit'
   },
   '/Trabajador/index':{
-    view: '/Trabajador/index'
+    view: 'Trabajador/index'
   },
   '/Trabajador/mostrar':{
-    view: '/Trabajador/mostrar'
+    view: 'Trabajador/mostrar'
   },
   '/Trabajador/new':{
-    view: '/Trabajador/new'
+    view: 'Trabajador/new'
   },
   '/Trabajador/show':{
-    view: '/Trabajador/show'
+    view: 'Trabajador/show'
   }
   
   /***************************************************************************
