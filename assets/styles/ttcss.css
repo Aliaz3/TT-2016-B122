@@ -317,5 +317,46 @@ used to vertically center elements, may need modification if you're not using de
     padding: 1.5em 1em 1em 2em;
 }
 
+nav
+{
+    background-color: #b12626;
+    float: left;
+    width: 100%;
+}
+nav ul
+{
+    clear: left;
+    margin: 0 auto;   
+    float: left;
+    padding-left: 50%;
+    position: relative; 
+    font: 13px Arial, Helvetica, sans-serif;
+}
+nav ul li
+{
+    list-style: none;
+    display: inline-block; 
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    float: left;
+    right: 50%;
+    position: relative;
+
+}
+nav ul li a
+{
+    color:white; 
+    
+    text-decoration: none;   
+}
+nav ul li:hover
+{
+    background-color: #c12626;   
+}
+nav ul li:hover > a
+{
+    color:white;
+    text-decoration: none;
+}
+
 
 https://www.sanwebe.com/2014/08/css-html-forms-designs
