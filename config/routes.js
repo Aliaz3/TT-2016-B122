@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Route Mappings
  * (sails.config.routes)
  *
@@ -47,8 +47,8 @@ module.exports.routes = {
   '/admini/AdminGraficas':{
     view: 'admini/AdminGraficas'
   },
-  '/admini/AdminListadoNiños':{
-    view: 'admini/AdminListadoNiños'
+  '/admini/AdminListadoNinos':{
+    view: 'admini/AdminListadoNinos'
   },
   '/admini/BienvenidaAdmin':{
     view: 'admini/BienvenidaAdmin'
@@ -142,6 +142,40 @@ module.exports.routes = {
   },
   '/Trabajador/show':{
     view: 'Trabajador/show'
+  },
+  '/static/new':{
+    view: 'static/new'
+  },
+  '/user/edit':{
+    view: 'user/edit'
+  },
+  '/user/index':{
+    view: 'user/index'
+  },'/user/new':{
+    view: 'user/new'
+  },'/user/show':{
+    view: 'user/show'
+  },
+  '/user-padreFam/autentication':{
+    view: 'user-padreFam/autentication'
+  },
+  '/user-padreFam/HistorialMedico':{
+    view: 'user-padreFam/HistorialMedico'
+  },
+  '/user-padreFam/menuSeleccionarHijo':{
+    view: 'user-padreFam/menuSeleccionarHijo'
+  },
+  '/user-padreFam/pantallaInicial':{
+    view: 'user-padreFam/pantallaInicial'
+  },
+  '/user-padreFam/ReportesDiarios':{
+    view: 'user-padreFam/ReportesDiarios'
+  },
+  '/user-padreFam/ReportesMensuales':{
+    view: 'user-padreFam/ReportesMensuales'
+  },
+  '/user-padreFam/VideoTR':{
+    view: 'user-padreFam/VideoTR'
   }
   
   /***************************************************************************
