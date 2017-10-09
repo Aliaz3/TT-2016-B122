@@ -1,10 +1,10 @@
 <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 <style type="text/css">
 .form-style-10{
-    width:450px;
+    /*width:450px;
     padding:30px;
-    margin:40px auto;
-    background: #FFF;
+    margin:40px auto;*/
+    background: #F8F8F8;
     border-radius: 10px;
     -webkit-border-radius:10px;
     -moz-border-radius: 10px;
@@ -20,7 +20,7 @@
     padding: 30px;
     background: #F8F8F8;
     border-radius: 6px;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 .form-style-10 h1{
     background: #b12626;
@@ -149,8 +149,9 @@ table {
 }
 
 th, td {
-    text-align: left;
-    padding: 8px;
+    /*text-align: left;*/
+    text-align: center;
+    
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
@@ -293,5 +294,28 @@ used to vertically center elements, may need modification if you're not using de
 .form-group1 {
   margin-bottom: 30px;
 }
+
+.container{
+    width: auto;
+}
+.scroll{
+    overflow:scroll;
+    height:auto;
+    width:auto;
+}
+.encabezado h1{
+    padding: 1.5em 1em 1em 2em;
+    margin-bottom: 0em;
+}
+.boton-regresar{
+    float:right;
+    font: normal 30px 'Bitter', serif;
+}
+.pie-pagina{
+    background: #b12626;
+    border-top: 0em;
+    padding: 1.5em 1em 1em 2em;
+}
+
 
 https://www.sanwebe.com/2014/08/css-html-forms-designs
