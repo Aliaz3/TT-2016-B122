@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
-
+    <title><%=typeof title == 'undefined' ? 'TT-2016-B122' : title%></title>
     <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!--
         Stylesheets and Preprocessors
@@ -29,7 +30,11 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap-theme.css">
+    <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min2.css">
     <link rel="stylesheet" href="/styles/easy-responsive-tabs.css">
     <link rel="stylesheet" href="/styles/font-awesome.css">
     <link rel="stylesheet" href="/styles/importer.css">
@@ -41,9 +46,56 @@
   </head>
 
   <body>
-    <%- body %>
+    
 
+<div class="container">
 
+      <div class="masthead">
+        <div class="encabezado rounded ">
+          <img src="/images/burro_cendi.png" class="float-left" style="width:60px">
+          <img src="/images/burro_cendi.png" class="float-right" style="width:60px">
+          <h1>Instituto Politécnico Nacional</h1>
+          <h3>Secretaría de Administración</h3>
+          <h4>Coordinación de Centros de Desarrollo Infantil </h4>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light menu rounded mb-3">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav text-md-center nav-justified w-100">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Conócenos</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Centros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Iniciar Sesión</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="#">A</a>
+                  <a class="dropdown-item" href="#">B</a>
+                  <a class="dropdown-item" href="#">C</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+    </div>
+<%- body %>
+
+      <footer class="pie-pagina">
+        <p>Instituto Politécnico Nacional<br>
+
+D.R. Instituto Politécnico Nacional (IPN), Avenida Juan de Dios Bátiz esquina Miguel Othón de Mendizábal, Col. Nueva Industrial Vallejo Delegación Gustavo A. Madero, C.P 07738, Ciudad de México. Tel. 5729-6000, 5729-6300 Ext. 57701, 57702, 57703, 57704. Correo electrónico: cocendi@ipn.mx<br>
+</p>
+      </footer>
+
+    </div>
 
     <!--
         Client-side Templates
@@ -96,7 +148,10 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/jquery-3.2.1.js"></script>
+    <script src="/js/dependencies/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/js/classie.js"></script>
     <script src="/js/easing.js"></script>
     <script src="/js/easy-responsive-tabs.js"></script>
@@ -109,6 +164,7 @@
     <script src="/js/jquery.transit.js"></script>
     <script src="/js/jquery.vide.min.js"></script>
     <script src="/js/move-top.js"></script>
+    <script src="/js/npm.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

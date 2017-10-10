@@ -235,8 +235,6 @@ table {
 }
 
 
-hola hola hola hola hola hola
-
 .panel-table .panel-body{
   padding:0;
 }
@@ -303,27 +301,36 @@ used to vertically center elements, may need modification if you're not using de
     height:auto;
     width:auto;
 }
-.encabezado h1{
+.encabezado{
     padding: 1.5em 1em 1em 2em;
     margin-bottom: 0em;
+    background-color: #fff;
+    color:#000;
+    text-align: center;
+}
+.encabezado h1, h2, h3, h4, h5{
+    padding: .1em;
 }
 .boton-regresar{
     float:right;
     font: normal 30px 'Bitter', serif;
 }
 .pie-pagina{
-    background: #b12626;
+    background: #f2f0f1;
     border-top: 0em;
     padding: 1.5em 1em 1em 2em;
+    color:#474747;
 }
-
-nav
+.pie-pagina p{
+    font-size: 1em;
+}
+.m2
 {
     background-color: #b12626;
     float: left;
     width: 100%;
 }
-nav ul
+.m2 ul
 {
     clear: left;
     margin: 0 auto;   
@@ -332,7 +339,7 @@ nav ul
     position: relative; 
     font: 13px Arial, Helvetica, sans-serif;
 }
-nav ul li
+.m2 ul li
 {
     list-style: none;
     display: inline-block; 
@@ -342,21 +349,34 @@ nav ul li
     position: relative;
 
 }
-nav ul li a
+.m2 ul li a
 {
     color:white; 
-    
     text-decoration: none;   
 }
-nav ul li:hover
+.m2 ul li:hover
 {
     background-color: #c12626;   
 }
-nav ul li:hover > a
+.m2 ul li:hover > a
 {
     color:white;
     text-decoration: none;
 }
-
-
-https://www.sanwebe.com/2014/08/css-html-forms-designs
+.menu{
+    background-color: #f2f0f1;
+}
+.menu ul li a
+{
+    color:white; 
+    text-decoration: none;   
+}
+/*.menu ul li:hover
+{
+    background-color: #c12626;   
+}*/
+.menu ul li:hover > a
+{
+    color:white;
+    text-decoration: underline;
+}
