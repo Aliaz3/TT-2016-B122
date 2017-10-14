@@ -48,7 +48,7 @@
   <body>
     
 
-<div class="container">
+<div class="container-fluid">
 
       <div class="masthead">
         <div class="encabezado rounded ">
@@ -62,10 +62,10 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav text-md-center nav-justified w-100">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Inicio</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="#">Conócenos</a>
@@ -73,17 +73,32 @@
               <li class="nav-item active">
                 <a class="nav-link" href="#">Centros</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Iniciar sesión</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </li>
             </ul>
+
+            <!-- iniciar sesion -->
+            <ul class="navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iniciar sesión</a>
+              <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h3><b>Iniciar Sesión</b></h3></div>
+                  <form id="ajax-login-form" action="#" method="post" role="form" autocomplete="off">
+                    <div class="form-group">
+                      <label for="username">Usuario:</label>
+                      <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Contraseña:</label>
+                      <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña" autocomplete="off">
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar</button>
+                  </form>
+                </div>
+              </ul>
+            </li>
+          </ul>
+
           </div>
         </nav>
       
@@ -99,55 +114,6 @@ D.R. Instituto Politécnico Nacional (IPN), Avenida Juan de Dios Bátiz esquina 
 
     </div>
 
-    <!--
-        Client-side Templates
-        ========================
-
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
-
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
-
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
-
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
-
-
-    <!--
-
-      Client-side Javascript
-      ========================
-
-      You can always bring in JS files manually with `script` tags, or asynchronously
-      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
-      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-      By default, files in your `assets/js` folder are included here
-      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
-      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
-      and concatenated into a single file.
-
-      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-      For example, here are a few things you could do:
-
-          + Change the order of your scripts
-          + Import scripts from other directories
-          + Use a different preprocessor, like TypeScript
-
-    -->
-
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <script src="/js/dependencies/jquery-3.2.1.js"></script>
@@ -157,6 +123,7 @@ D.R. Instituto Politécnico Nacional (IPN), Avenida Juan de Dios Bátiz esquina 
     <script src="/js/classie.js"></script>
     <script src="/js/easing.js"></script>
     <script src="/js/easy-responsive-tabs.js"></script>
+    <script src="/js/jquery-1.10.2.min.js"></script>
     <script src="/js/jquery-2.1.4.min.js"></script>
     <script src="/js/jquery.flexisel.js"></script>
     <script src="/js/jquery.gallery.js"></script>
