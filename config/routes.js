@@ -50,9 +50,7 @@ module.exports.routes = {
   '/admini/AdminListadoNinos':{
     view: 'admini/AdminListadoNinos'
   },
-  '/admini/BienvenidaAdmin':{
-    view: 'admini/BienvenidaAdmin'
-  },
+  
   '/servicioMedico/Bienvenidadra':{
     view: 'servicioMedico/Bienvenidadra'
   },
