@@ -7,8 +7,15 @@
 
 module.exports = {
 	
-	'administradorIndex': function (req, res){
+	'new': function (req, res){
 		res.view();
+	},
+	
+	create : function (req, res, next){
+		Administrador.create( req.params.all(), function userCreated(err, user){
+			if(err) return next(err);
+			res.json(user);
+		});
 	}
 	
 };

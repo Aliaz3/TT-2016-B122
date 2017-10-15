@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-
+	schema : true,
   attributes: {
 	tipo: {
 		type: 'string',
@@ -29,6 +29,12 @@ module.exports = {
 	},
 	contrasenaE: {
 		type:'string'
+	},
+	toJSON: function() {
+		var obj = this.toObject();
+		delete obj.contrasenaE;
+		delete obj._csrf;
+		return obj;
 	}
   }
 	
