@@ -7,6 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/bootstrap-theme.css">
     <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
@@ -30,6 +52,13 @@
 <div class="container-fluid">
 
       <div class="masthead">
+        <div class="encabezado rounded ">
+          <img src="/images/burro_cendi.png" class="float-left" style="width:60px">
+          <img src="/images/burro_cendi.png" class="float-right" style="width:60px">
+          <h1>Instituto Politécnico Nacional</h1>
+          <h3>Secretaría de Administración</h3>
+          <h4>Coordinación de Centros de Desarrollo Infantil </h4>
+        </div>
         <nav class="navbar navbar-expand-md navbar-light menu rounded mb-3">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

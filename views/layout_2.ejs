@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title><%=typeof title == 'undefined' ? 'TT-2016-B122' : title%></title>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap-theme.css">
+    <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min2.css">
+    <link rel="stylesheet" href="/styles/carousel.css">
+    <link rel="stylesheet" href="/styles/easy-responsive-tabs.css">
+    <link rel="stylesheet" href="/styles/font-awesome.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/jquery.gallery.css">
+    <link rel="stylesheet" href="/styles/popuo-box.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/ttcss.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Project Name</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="http://phpoll.com/register" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h3><b>Register</b></h3></div>
+              <form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+                <div class="form-group">
+                  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                      <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+              </form>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h3><b>Log In</b></h3></div>
+              <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <input type="checkbox" tabindex="3" name="remember" id="remember">
+                      <label for="remember"> Remember Me</label>
+                    </div>
+                    <div class="col-xs-5 pull-right">
+                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="text-center">
+                        <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+              </form>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container">
+
+      <div class="masthead">
+        <div class="encabezado rounded ">
+          <img src="/images/burro_cendi.png" class="float-left" style="width:60px">
+          <img src="/images/burro_cendi.png" class="float-right" style="width:60px">
+          <h1>Instituto Politécnico Nacional</h1>
+          <h3>Secretaría de Administración</h3>
+          <h4>Coordinación de Centros de Desarrollo Infantil </h4>
+        </div>
+        
+      
+    </div>
+    <%- body %>
+
+      <footer class="pie-pagina">
+        <p>Instituto Politécnico Nacional<br>
+
+D.R. Instituto Politécnico Nacional (IPN), Avenida Juan de Dios Bátiz esquina Miguel Othón de Mendizábal, Col. Nueva Industrial Vallejo Delegación Gustavo A. Madero, C.P 07738, Ciudad de México. Tel. 5729-6000, 5729-6300 Ext. 57701, 57702, 57703, 57704. Correo electrónico: cocendi@ipn.mx<br>
+</p>
+      </footer>
+
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/jquery-3.2.1.js"></script>
+    <script src="/js/dependencies/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/easing.js"></script>
+    <script src="/js/easy-responsive-tabs.js"></script>
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery.flexisel.js"></script>
+    <script src="/js/jquery.gallery.js"></script>
+    <script src="/js/jquery.glide.js"></script>
+    <script src="/js/jquery.magnific-popup.js"></script>
+    <script src="/js/jquery.textFx.js"></script>
+    <script src="/js/jquery.transit.js"></script>
+    <script src="/js/jquery.vide.min.js"></script>
+    <script src="/js/move-top.js"></script>
+    <script src="/js/npm.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
