@@ -1,16 +1,27 @@
+<div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="/administrador/new">Nuevo usuario <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registro de alumnos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gráficas Mensuales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ver usuarios</a>
+            </li>
+          </ul>
+        </nav>
 
-				<nav class="m2">
-					<ul>
-						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Registro de alumnos</a></li>
-						<li><a href="#">Gráficas Mensuales</a></li>
-					</ul> 
-				</nav>
+        <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+          <h2>Registrar nuevo usuario</h2>
 
-        		<div class="section1">
-          			<h3>Bienvenida Administradora</h3>
-        		</div>
-				<form action="/administrador/create" method ="POST" class="form-singin">
+          <section class="row text-center placeholders">
+            <form action="/administrador/create" method ="POST" class="form col-sm-6">
 				<% if(flash && flash.err) { %>
 					<ul class="alert alert-success">
 				<% Object.keys(flash.err).forEach(function(error) { %>
@@ -18,24 +29,32 @@
 				<% }) %>
 				</ul>
 				<% } %>
-				<div class="control-group">
+				<div class="form-group">
 				<input type="text" class="form-control" placeholder="Tipo Usuario" name="tipo">
 				</div>
-				<div class="control-group">
+				<div class="form-group">
 				<input type="text" class="form-control" placeholder="Tu nombre" name="nombre">
 				</div>
-				<div class="control-group">
+				<div class="form-group">
 				<input type="text" class="form-control" placeholder="Apellido paterno" name="apellidoP">
 				</div>
-				<div class="control-group">
+				<div class="form-group">
 				<input type="text" class="form-control" placeholder="Apellido materno" name="apellidoM">
 				</div>
-				<div class="control-group">
+				<div class="form-group">
 				<input type="text" class="form-control" placeholder="Usuario" name="usuario">
 				</div>
-				<div class="control-group">
+				<div class="form-group">
 				<input type="password" class="form-control" placeholder="Contraseña" name="contrasenaE" >
 				</div>
-				<input type="submit" class="btn btn-lg btn-primary btn-block" value "crear Usuario"/>
+				<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block">Crear Usuario</button>
 				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+				</div>
+				
 				</form>
+          </section>
+
+        </main>
+      </div>
+    </div>
