@@ -8,9 +8,7 @@
 module.exports = {
 	
 	'new': function (req, res){
-		res.locals.flash = _.clone(req.session.flash);
 		res.view();
-		req.session.flash ={};
 	},
 	
 	create : function (req, res, next){
@@ -23,7 +21,6 @@ module.exports = {
 				return res.redirect('/administrador/new');
 			}
 			res.json(user);
-			req.session.flash ={};
 		});
 	}
 	

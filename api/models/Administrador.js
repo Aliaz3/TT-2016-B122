@@ -34,6 +34,7 @@ module.exports = {
 		var obj = this.toObject();
 		delete obj.contrasenaE;
 		delete obj._csrf;
+		
 		return obj;
 	}
   }

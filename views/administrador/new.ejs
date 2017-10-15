@@ -21,7 +21,7 @@
           <h2>Registrar nuevo usuario</h2>
 
           <section class="row text-center placeholders">
-            <form action="/administrador/create" method ="POST" class="form col-sm-6">
+            <form action="/administrador/create" method ="POST" class="form-signin col-sm-6">
 				<% if(flash && flash.err) { %>
 					<ul class="alert alert-success">
 				<% Object.keys(flash.err).forEach(function(error) { %>
@@ -29,28 +29,37 @@
 				<% }) %>
 				</ul>
 				<% } %>
-				<div class="form-group">
-				<input type="text" class="form-control" placeholder="Tipo Usuario" name="tipo">
+				<div class="control-group">
+				<input type="text" class="form-control" placeholder="Tipo Usuario" name="tipo" id="tipo">
 				</div>
-				<div class="form-group">
-				<input type="text" class="form-control" placeholder="Tu nombre" name="nombre">
+				<br/>
+				<div class="control-group">
+				<input type="text" class="form-control" placeholder="Tu nombre" name="nombre" id="nombre">
 				</div>
-				<div class="form-group">
+				<br/>
+				<div class="control-group">
 				<input type="text" class="form-control" placeholder="Apellido paterno" name="apellidoP">
 				</div>
-				<div class="form-group">
+				<br/>
+				<div class="control-group">
 				<input type="text" class="form-control" placeholder="Apellido materno" name="apellidoM">
 				</div>
-				<div class="form-group">
-				<input type="text" class="form-control" placeholder="Usuario" name="usuario">
+				<br/>
+				<div class="control-group">
+				<input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario">
 				</div>
-				<div class="form-group">
-				<input type="password" class="form-control" placeholder="Contraseña" name="contrasenaE" >
+				<br/>
+				<div class="control-group">
+				<input type="password" class="form-control" placeholder="Contraseña" name="contrasena" id="contrasena" >
 				</div>
-				<div class="form-group">
+				<br/>
+				<div class="control-group">
+				<input type="password" class="form-control" placeholder="Confirmar Contraseña" name="confirmacion" id="confirmacion">
+				</div>
+				<br/>
 				<button type="submit" class="btn btn-primary btn-block">Crear Usuario</button>
+				<br/>
 				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
-				</div>
 				
 				</form>
           </section>

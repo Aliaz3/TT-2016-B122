@@ -1,6 +1,6 @@
 module.exports = function(req,res, next){
 	
-	res.locals.flash={};
+	res.locals.flash = {};
 	
 	if(!req.session.flash) return next();
 	
