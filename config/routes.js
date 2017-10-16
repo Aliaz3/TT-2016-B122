@@ -35,20 +35,23 @@ module.exports.routes = {
   '/': {
     view: 'static/index'
   },
-  '/admini/AdmiListadoPadre':{
-    view: 'admini/AdmiListadoPadre'
+  '/AdmiListadoPadre':{
+    view: 'administrador/AdmiListadoPadre'
   },
-  '/admini/AdmiListadoPersonaAutorizada':{
-    view: 'admini/AdmiListadoPersonaAutorizada'
+  '/AdmiListadoPersonaAutorizada':{
+    view: 'administrador/AdmiListadoPersonaAutorizada'
   },
-  '/admini/AdmiListadoDerechohabiente':{
-    view: 'admini/AdmiListadoDerechohabiente'
+  '/AdmiListadoDerechohabiente':{
+    view: 'administrador/AdmiListadoDerechohabiente'
   },
-  '/admini/AdminGraficas':{
-    view: 'admini/AdminGraficas'
+  '/AdmiUsers':{
+    view: 'administrador/AdminUsers'
   },
-  '/admini/AdminListadoNinos':{
-    view: 'admini/AdminListadoNinos'
+  '/AdminGraficas':{
+    view: 'administrador/AdminGraficas'
+  },
+  '/AdminListadoNinos':{
+    view: 'administrador/AdminListadoNinos'
   },
   
   '/servicioMedico/Bienvenidadra':{
