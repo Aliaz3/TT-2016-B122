@@ -54,31 +54,31 @@ module.exports.routes = {
     view: 'administrador/AdminListadoNinos'
   },
   
-  '/servicioMedico/Bienvenidadra':{
+  '/Bienvenidadra':{
     view: 'servicioMedico/Bienvenidadra'
   },
-  '/servicioMedico/AgregarNuevaDosisMedico':{
+  '/AgregarNuevaDosisMedico':{
     view: 'servicioMedico/AgregarNuevaDosisMedico'
   },
-  '/servicioMedico/FAC48':{
+  '/FAC48':{
     view: 'servicioMedico/FAC48'
   },
-  '/servicioMedico/FAC49':{
+  '/FAC49':{
     view: 'servicioMedico/FAC49'
   },
-  '/servicioMedico/FAC50':{
+  '/FAC50':{
     view: 'servicioMedico/FAC50'
   },
-  '/servicioMedico/FAC51':{
+  '/FAC51':{
     view: 'servicioMedico/FAC51'
   },
-  '/servicioMedico/FAC71':{
+  '/FAC71':{
     view: 'servicioMedico/FAC71'
   },
-  '/servicioMedico/FAC90':{
+  '/FAC90':{
     view: 'servicioMedico/FAC90'
   },
-  '/servicioMedico/FAC98':{
+  '/FAC98':{
     view: 'servicioMedico/FAC98'
   },
   '/Session/new':{
