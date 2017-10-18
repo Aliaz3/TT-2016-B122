@@ -1,0 +1,23 @@
+<div class="container">
+<h3>USERS</h3>
+<table>
+<tr>
+<th>ID</th>
+<th>nombre</th>
+<th>AP</th>
+<th>AM</th>
+<th>Usuario</th>
+</tr>
+
+	<% _.each(users, function(user) { %>
+	<tr data-id="<%= user.id %>" data-model="administrador">
+	  <td><%= user.id %></td>
+	  <td><%= user.tipo %></td>
+	  <td><%= user.nombre %></td>
+	  <td><%= user.apellidoM %></td>
+	  <td><%= user.apellidoP %></td>
+	  <td><%= user.usuario %></td>
+	</tr>
+	<% }) %>
+	</table>
+	</div>

@@ -28,21 +28,17 @@
         </nav>
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-          <h2>Detalles Usuario:<%= user.nombre %></h2>
-
-          <div class='container'>
-			ID: <%=	user.id %>
-			Nombre:<%= user.nombre %>
-			Apellido Materno: <%= user.apellidoM %>
-			Apellido Paterno: <%= user.apellidoP %>
-			Usuario: <%= user.usuario %>
-			<a class="btn btn-medum btn-primary" href="/administrador/editar/<%= user.id %>"> Editar</a>
-			<form action="/administrador/destroy/<%= user.id %>" method="POST">
-			<input type="hidden" name="method" value=delete"/>
-			<input type="submit" class="btn btn-sm btn-danger" value="Eliminar"/>
-			<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+          <h2>Editando Usuario </h2>
+			<form action="/administrador/update/<%= user.id %>" method="POST" class="form-singin">
+			<input value="<%= user.tipo %>" name="tipo" type="text" class="form-control"/>
+			<input value="<%= user.nombre %>" name="nombre" type="text" class="form-control"/>
+			<input value="<%= user.apellidoP %>" name="apellidoP" type="text" class="form-control"/>
+			<input value="<%= user.apellidoM %>" name="apellidoM" type="text" class="form-control"/>
+			<input value="<%= user.usuario %>" name="usuario" type="text" class="form-control"/>
+			<input type="submit" value="Cambiar" class="btn btn-lg btn-primary btn-block"/>
+			<input type="hidden" name="_csrf" value="<%= _csrf %>"/>
 			</form>
-		</div>
+          
 
         </main>
       </div>

@@ -33,7 +33,48 @@ module.exports = {
 				user: user
 			});
 		});
+	},
+	
+	AdminListadoUsuarios: function (req, res, next){
+		Administrador.find(function foundUsers (err, users){
+			res.view({
+				users: users
+			});
+		});
+	},
+	
+	editar: function (req, res, next){
+		Administrador.findOne(req.param('id'), function foundUser (err, user){
+			if (err) return next(err);
+			if (!user) return next();
+			
+			res.view({
+				user: user
+			});
+		});
+	},
+	
+	update: function (req, res, next){
+		Administrador.update(req.param('id'), req.params.all(), function userUpdated (err){
+			if(err){
+				return res.redirect('/administrador/editar/' + req.param('id'));
+			}
+			res.redirect('/administrador/show/' + req.param('id'));
+		});
+	},
+	
+	destroy: function (req, res, next){
+		Administrador.findOne(req.param('id'), function foundUser (err, user) {
+			if (err) return next(err);
+			if (!user) return next('no existe el usuario.');
+			
+			Administrador.destroy(req.param('id'), function userDestroyed(err) {
+				if (err) return next(err);
+			});
+			res.redirect('/administrador/AdminListadoUsuarios');
+		});
 	}
+	
 	
 };
 
