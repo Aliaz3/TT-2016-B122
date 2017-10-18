@@ -321,11 +321,12 @@ code {
 }
 
 .contenido-usr{
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     font-family: verdana;
 }
 .contenido-usr h3{
     text-align: center;
+    margin-top: 0px;
 }
 
 /*formulario vistas*/

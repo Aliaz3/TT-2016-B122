@@ -81,6 +81,9 @@ module.exports.routes = {
   '/FAC98':{
     view: 'servicioMedico/FAC98'
   },
+  '/FAC103':{
+    view: 'servicioMedico/FAC103'
+  },
   '/Session/new':{
     view:'Session/new'
   },
