@@ -6,27 +6,31 @@
  */
 var bcrypt = require('bcrypt');
 module.exports = {
-	new: function(req, res){
-		res.view();
+	index: function(req, res){
+		var Fechaant = new Date();
+		var Fechanew = new Date(Fechaant.getTime() + 60000);
+		req.session.cookie.expires = Fechanew;
+		console.log(req.session);
+		res.view('session/index');
 	},
 	
 	create: function(req, res, next){
-		var username = req.param('username');
-		var password = req.param('password');
-		if(!username ||!password){
+		var usuario = req.param('usuario');
+		var contrasena = req.param('contrasena');
+		if(!usuario ||!contrasena){
 			var noUsernameOrPasswordError=[{message:'Debe ingresar un usuario y contraseña'}]
 			req.session.flash={
 				err:noUsernameOrPasswordError
 			}
-			return res.redirect('/session/new');
+			return res.redirect('/session/index');
 		}
 		
-		User.findOneByUsername(username, function userFounded (err, user){
+		Administrador.findOneByUsuario(usuario, function userFounded (err, user){
 			if(err){
 				req.session.flash={
 					err:err
 				}
-				return res.redirect('/session/new');
+				return res.redirect('/session/index');
 			}
 			
 			if(!user){
@@ -34,15 +38,15 @@ module.exports = {
 				req.session.flash={
 					err:noUserFoundedError
 				}
-				return res.redirect('/session/new');
+				return res.redirect('/session/index');
 			}
 			
-			bcrypt.compare(password, user.encryptedPassword, function passwordsMatch(err, valid){
+			bcrypt.compare(contrasena, user.contrasenaE, function passwordsMatch(err, valid){
 				if(err){
 				req.session.flash={
 					err:err
 				}
-				return res.redirect('/session/new');
+				return res.redirect('/session/index');
 			}
 			
 			if(!valid){
@@ -50,19 +54,19 @@ module.exports = {
 				req.session.flash={
 					err:passwordDoNotMatchError
 				}
-				return res.redirect('/session/new');
+				return res.redirect('/session/index');
 			}
 			
 			req.session.authenticated = true;
 			req.session.User = user;
-			res.redirect('/user/show/'+user.id);
+			res.redirect('/administrador/show/'+user.id);
 			});
 		});
 	},
 	
 	destroy: function(req, res, next){
 		req.session.destroy();
-		res.redirect('/session/new');
+		res.redirect('/session/index');
 	}
 };
 

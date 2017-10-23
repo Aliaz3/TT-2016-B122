@@ -37,6 +37,18 @@ module.exports = {
 		
 		return obj;
 	}
+  },
+  
+  beforeCreate: function (values, next){
+	  if(!values.contrasena || values.contrasena!=values.confirmacion){
+		  return next({err: ["Las contraseñas no son iguales."]});
+	  }
+	  require('bcrypt').hash(values.contrasena, 10, function passwordEncrypted(err, contrasenaE){
+		  if(err) return next(err);
+		  values.contrasenaE = contrasenaE;
+		  //values.online = true;
+		  next();
+	});
   }
 	
 };

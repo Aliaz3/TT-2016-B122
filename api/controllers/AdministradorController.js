@@ -36,6 +36,8 @@ module.exports = {
 	},
 	
 	AdminListadoUsuarios: function (req, res, next){
+		console.log(new Date());
+		console.log(req.session.authenticated);
 		Administrador.find(function foundUsers (err, users){
 			res.view({
 				users: users
