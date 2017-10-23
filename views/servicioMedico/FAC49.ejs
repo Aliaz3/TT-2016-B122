@@ -27,10 +27,10 @@
               </ul>
           </div>
       </div>
-  <div class="container-fluid">
+  <div class="container-fluid contenido">
     <div class="row contenido-usr">
       <h3><b>Aviso de Suspensión por Enfermedad</b></h3>
-      <p><b>Instrucciones:</b> Favor de ingresar los campos.</p>
+      <p class="col-xs-6 col-md-offset-2"><b>Instrucciones:</b> Favor de ingresar los campos.</p>
         
         <div class="stepwizard col-md-offset-3">
           <div class="stepwizard-row setup-panel">
@@ -55,25 +55,49 @@
         <div class="col-md-12">
           <h3>Motivos</h3>
           <div class="form-group">
-            <label class="control-label">Nombre del Padre o Tutor:</label>
-            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Ingrese el nombre del Padre o tutor"  />
+            <label class="cols-sm-2 control-label">Grupo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <select class="form-control" id="grupo" name="grupo">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="Maternal I">Maternal I</option>
+                  <option value="Maternal II">Maternal II</option>
+                  <option value="Maternal III">Maternal III</option>
+                </select>
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label class="control-label">Unidad de Adscripción:</label>
-            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Ingrese Unidad de Adscripción" />
+            <label class="cols-sm-2 control-label">Nombre del Niño:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="alan">Alan Oswaldo Díaz Martínez</option>
+                  <option value="Jaqui">Jaqueline Henrandéz García</option>
+                </select>
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label class="control-label">Nombre del Niño</label>
-            <input required="required" type="text" class="form-control" placeholder="Ingrese nombre del niño" >
+            <label class="cols-sm-2 control-label">Nombre del Padre o Tutor:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Ingrese el nombre del Padre o tutor"  />
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label class="control-label">Grupo:</label>
-            <select class="form-control" id="grupo" name="grupo">
-                    <option value="default" selected disabled hidden>--Seleccione--</option>
-                    <option value="Maternal I">Maternal I</option>
-                    <option value="Maternal II">Maternal II</option>
-                    <option value="Maternal III">Maternal III</option>
-            </select>
+            <label class="cols-sm-2 control-label">Unidad de Adscripción:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input maxlength="100" type="text" required="required" class="form-control" placeholder="Ingrese Unidad de Adscripción" />
+              </div>
+            </div>
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
         </div>
@@ -84,12 +108,31 @@
         <div class="col-md-12">
           <h3>Diagnóstico Probable</h3>
           <div class="form-group">
-            <label class="control-label">Diagnóstico Probable:</label>
-            <input maxlength="200" type="text" required="required" class="form-control" placeholder="" />
+            <label class="cols-sm-2 control-label">Sintomas:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+                <textarea maxlength="200" required="required" class="form-control" placeholder="Sintomas"  /></textarea>
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label class="control-label">Observaciones:</label>
-            <textarea maxlength="200" required="required" class="form-control" placeholder="Observaciones"  /></textarea>
+            <label class="cols-sm-2 control-label">Diagnóstico Probable:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
+                <input maxlength="200" type="text" required="required" class="form-control" placeholder="" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Observaciones:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-medkit" aria-hidden="true"></i></span>
+                <textarea maxlength="200" required="required" class="form-control" placeholder="Observaciones"  /></textarea>
+              </div>
+            </div>
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
         </div>
@@ -100,8 +143,13 @@
         <div class="col-md-12">
           <h3>Para ser llenado por el Médico Tratante</h3>
           <div class="form-group">
-            <label class="control-label">Favor de Indicar sus impresiones diagnósticas:</label>
-            <textarea maxlength="200" required="required" class="form-control" placeholder=""  /></textarea>
+            <label class="cols-sm-2 control-label">Favor de Indicar sus impresiones diagnósticas:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+                <textarea maxlength="200" required="required" class="form-control" placeholder=""  /></textarea>
+              </div>
+            </div>
           </div>
           <button class="btn btn-success btn-lg pull-right" type="submit">Guardar</button>
         </div>

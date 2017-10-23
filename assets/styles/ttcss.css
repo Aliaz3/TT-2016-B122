@@ -1,9 +1,11 @@
 body{
     /*padding:3em;*/
-    background-image:url('/images/back1.jpg');
+    background-image:url('/images/back2.jpg');
     margin: 0px;
   padding: 0px;
   margin-bottom: 60px;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container{
     width: auto;
@@ -290,10 +292,15 @@ html {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  
   /*position: fixed;*/
-}
+  padding-top: 0px;
+  text-align: center;
 
+}
+.footer a{
+  color: #B8B7B7;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -368,4 +375,14 @@ code {
     font-size: 12px;
     line-height: 1.428571429;
     border-radius: 15px;
+}
+
+.menu{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.contenido{
+  padding-top: 70px;
 }

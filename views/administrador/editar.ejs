@@ -1,34 +1,40 @@
-<div class="container-fluid">
+<div class="nav-side-menu">
+  <div class="brand">Bienvenido @Administrador</div>
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  <div class="menu-list">
+    <ul id="menu-content" class="menu-content collapse out">
+      <li  data-toggle="collapse" data-target="#GestUsrs" class="collapsed active">
+        <a href="#"><i class="fa fa-users" aria-hidden="true"></i>Gestionar Usuarios<span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="GestUsrs">
+        <li class="active"><a href="/administrador/new">Registrar Usuario</a></li>
+        <li><a href="/AdmiUsers">Ver usuarios</a></li>
+      </ul>
+    </ul>
+    <ul id="menu-content" class="menu-content collapse out">
+      <li  data-toggle="collapse" data-target="#Reportes" class="collapsed active">
+        <a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>Reportes<span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="Reportes">
+        <li><a href="#">Reportes mensuales</a></li>
+        <li><a href="/AdminGraficas">Ver gráficas</a></li>
+      </ul>
+    </ul>
+    <ul id="menu-content" class="menu-content collapse out">
+      <li  data-toggle="collapse" data-target="#GestArch" class="collapsed active">
+        <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Gestionar Archivos<span class="arrow"></span></a>
+      </li>
+      <ul class="sub-menu collapse" id="GestArch">
+        <li><a href="#">Recomendaciones</a></li>
+        <li><a href="#">Tareas</a></li>
+      </ul>
+    </ul>
+  </div>
+</div>
+<div class="container-fluid contenido">
       <div class="row">
-        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-          <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#">Bienvenido @Administrador</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestionar Usuarios<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/administrador/new">Registrar Usuario</a></li>
-              <li><a href="#">Ver usuarios</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reportes<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Reportes mensuales</a></li>
-              <li><a href="/AdminGraficas">Ver gráficas</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestionar Archivos<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Recomendaciones</a></li>
-              <li><a href="#">Tareas</a></li>
-            </ul>
-          </li>
-          </ul>
-        </nav>
-
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-          <h2>Editando Usuario </h2>
+          <h2>Editar Usuario </h2>
 			<form action="/administrador/update/<%= user.id %>" method="POST" class="form-singin">
 			<input value="<%= user.tipo %>" name="tipo" type="text" class="form-control"/>
 			<input value="<%= user.nombre %>" name="nombre" type="text" class="form-control"/>
