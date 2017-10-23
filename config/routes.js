@@ -33,7 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'session/index'
+    view: 'Session/index'
   },
   '/AdmiListadoPadre':{
     view: 'administrador/AdmiListadoPadre'
