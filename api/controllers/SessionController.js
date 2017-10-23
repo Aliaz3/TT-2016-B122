@@ -10,7 +10,6 @@ module.exports = {
 		var Fechaant = new Date();
 		var Fechanew = new Date(Fechaant.getTime() + 60000);
 		req.session.cookie.expires = Fechanew;
-		req.session.authenticated= true;
 		console.log(req.session);
 		res.view('session/index');
 	},

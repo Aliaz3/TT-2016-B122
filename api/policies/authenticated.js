@@ -4,6 +4,7 @@ module.exports= function (req, res, ok){
 	}
 	else{
 		var requireLoginError=[{message:'debes iniciar session'}]
+		console.log(requireLoginError);
 		req.session.flash={
 			err:requireLoginError
 		}

@@ -15,7 +15,73 @@
     <link rel="stylesheet" href="/styles/ttcss.css">
     <!--STYLES END-->
   </head>
-
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Inicio</a></li>
+        <li><a href="#">Conocenos</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Instalaciones<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Área de juegos</a></li>
+            <li><a href="#">Salón de usos múltiples </a></li>
+            <li><a href="#">Comedor</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Grupo de Lactantes I, II y III</a></li>
+            <li><a href="#">Grupo Maternal I, II y III</a></li>
+            <li><a href="#">Grupo Preescolar I, II y III</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Pedagogía</a></li>
+            <li><a href="#">Odontología</a></li>
+            <li><a href="#">Servicio Médico</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+     <!-- iniciar sesion -->
+	<!-- <% if (session.authenticated) { %> -->
+	<!-- <li class="active"><a href="/administrador/show/<%= session.User.id %>"><%= session.User.nombre %> </a> </li> -->
+	<!-- <% } %> -->
+	<% if (session.authenticated) { %>
+		<a class="btn btn-default navbar-btn navbar-right" href="/session/destroy">Cerrar Sesion </a>
+		<% } %>
+	<% if (!session.authenticated) { %>
+            <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iniciar sesión</a>
+              <ul id="login-dp" class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                <div class="row">
+              <div class="col-md-12">
+                <h4><b>Iniciar Sesión</b></h4>
+                 <form id="ajax-login-form" class="form" role="form" method="post" action="/session/create" accept-charset="UTF-8">
+				 
+                    <div class="form-group">
+                       <label class="sr-only" for="UserName">Usuario</label>
+                       <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
+                    </div>
+                    <div class="form-group">
+                       <label class="sr-only" for="password">Contraseña</label>
+                       <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group">
+                       <button type="submit" class="btn btn-primary btn-block">Iniciar</button>
+					   <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                    </div>
+                 </form>
+				 
+				 
+              </div>
+           </div>
+              </ul>
+            </li>
+          </ul>
+			<% } %>
+          <!-- fin iniciar sesión-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
   <body>
  
 
