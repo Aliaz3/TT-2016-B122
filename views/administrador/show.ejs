@@ -38,7 +38,8 @@
     <p><span><i class="fa fa-address-card" aria-hidden="true"></i>	Nombre:</span> <%= user.nombre %></p>
     <p><span><i class="fa fa-address-card" aria-hidden="true"></i> Apellido Materno:</span> <%= user.apellidoM %></p>
     <p><span><i class="fa fa-address-card" aria-hidden="true"></i>	Apellido Paterno:</span> <%= user.apellidoP %></p>
-    <p><span><i class="fa fa-user-circle" aria-hidden="true"></i>	Tipo Usuario:</span> <%= user.usuario %></p>
+    <p><span><i class="fa fa-user-circle" aria-hidden="true"></i>	Tipo Usuario:</span> <%= user.tipo %></p>
+	<p><span><i class="fa fa-user-card" aria-hidden="true"></i> Usuario:</span><%= user.usuario %></p>
     <span><a class="btn btn-medum btn-primary" href="/administrador/editar/<%= user.id %>"> Editar</a></span>
     <form action="/administrador/destroy/<%= user.id %>" method="POST">
     <input type="hidden" name="method" value=delete"/>

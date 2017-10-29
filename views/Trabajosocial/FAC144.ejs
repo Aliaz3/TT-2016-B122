@@ -1,0 +1,218 @@
+<div class="nav-side-menu">
+  <div class="brand">Bienvenida @TS</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+          <div class="menu-list">
+    
+              <ul id="menu-content" class="menu-content collapse out">
+                  <li  data-toggle="collapse" data-target="#repMens" class="collapsed">
+                    <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Reportes mensuales<span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="repMens">
+                      <li><a href="/nuevoRepMens">Agregar reporte</a></li>
+                      <li><a href="/ReporteMensualTS">Ver reporte</a></li>
+                  </ul>
+                  <li  data-toggle="collapse" data-target="#repD" class="collapsed">
+                    <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Reportes diarios<span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="repD">
+                      <li><a href="/nuevoRepDiarioTS">Agregar reporte</a></li>
+                      <li><a href="/ReporteDiarioTS">Ver reporte</a></li>
+                  </ul>
+
+                  <li  data-toggle="collapse" data-target="#Afacs" class="collapsed active">
+                    <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Agregar FAC's <span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="Afacs">
+                    <li><a href="/FAC11">FAC 11. Estudio Socioeconómico V 03</a></li>
+                    <li><a href="/FAC13">FAC 13. Ficha de Reinscripción</a></li>
+                      <li><a href="/FAC14">FAC 14. Ficha de Identificación V 10</a></li>
+                      <li><a href="/FAC130">FAC 130. Indicaciones para las Derechohabientes V 03</a></li>
+                      <li><a href="/FAC131">FAC 131. Carta Compromiso V 04</a></li>
+                      <li class="active"><a href="/FAC144">FAC 144. Ingreso en Trámite V00</a></li>
+                  </ul>
+                  <li  data-toggle="collapse" data-target="#Vfacs" class="collapsed">
+                    <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver FAC's <span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="Vfacs">
+                    <li><a href="/VFAC11">FAC 11. Estudio Socioeconómico V 03</a></li>
+                    <li><a href="/VFAC13">FAC 13. Ficha de Reinscripción</a></li>
+                      <li><a href="/VFAC14">FAC 14. Ficha de Identificación V 10</a></li>
+                      <li><a href="/VFAC130">FAC 130. Indicaciones para las Derechohabientes V 03</a></li>
+                      <li><a href="/vFAC131">FAC 131. Carta Compromiso V 04</a></li>
+                      <li><a href="/VFAC144">FAC 144. Ingreso en Trámite V00</a></li>
+                  </ul>
+              </ul>
+          </div>
+      </div>
+<div class="container-fluid contenido">
+    <div class="row contenido-usr">
+      <h3><b>Ingreso en trámite</b></h3>
+      
+      <p class="col-xs-6 col-md-offset-2"><b>Instrucciones:</b> Favor de ingresar los campos.</p>
+      <div class="col-xs-6 col-md-offset-3">
+      <form class="" method="post" action="#">
+            <div class="col-xs-8 form-group">
+              <label for="cicloEsc" class="cols-sm-2 control-label">Ciclo Escolar:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></i></span>
+                  <input type="text" class="form-control" name="cicloEsc" id="cicloEsc"  placeholder="Ciclo Escolar"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="hora" class="cols-sm-2 control-label">Hora:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                  <input type="text" required="required"  class="form-control" name="hora" id="hora"  placeholder="00:00 hrs"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 form-group">
+              <label for="grupo" class="cols-sm-2 control-label">Grupo:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                  <select required="required" class="form-control" id="grupo" name="grupo">
+                    <option value="default" selected disabled hidden>--Seleccione--</option>
+                    <option value="Maternal I">Maternal I</option>
+                    <option value="Maternal II">Maternal II</option>
+                    <option value="Maternal III">Maternal III</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nombreNino" class="cols-sm-2 control-label">Nombre del niño(a):</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="alan">Alan Oswaldo Díaz Martínez</option>
+                  <option value="Jaqui">Jaqueline Henrandéz García</option>
+                </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fechaNac" class="cols-sm-2 control-label">Fecha de Nacimiento:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="fechaNac" id="fechaNac" required="required" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nombreDer" class="cols-sm-2 control-label">Nombre Derechohabiente o Tutor:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="nombreDer" id="nombreDer"  placeholder="Nombre tutor"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 form-group">
+              <label for="RFC" class="cols-sm-2 control-label">R.F.C.:</label>
+              <div class="cols-sm-4">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="RFC" id="RFC"  placeholder="RFC"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ocupacion" class="cols-sm-2 control-label">Ocupación:</label>
+              <div class="cols-sm-5">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" required="required" name="ocupacion" id="ocupacion"  placeholder=""/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="LTrab" class="cols-sm-2 control-label">Lugar de Trabajo:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="LTrab" id="LTrab"  placeholder="Lugar de Trabajo"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 form-group">
+              <label for="telTrab" class="cols-sm-2 control-label">Teléfono de trabajo:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="telTrab" id="telTrab"  placeholder=""/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telPart" class="cols-sm-2 control-label">Teléfono particular:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="telPart" id="telPart"  placeholder=""/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="PAut" class="cols-sm-2 control-label">Persona autorizada para recoger al niño (a):</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="PAut" id="PAut"  placeholder="Persona autorizada"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 form-group">
+              <label for="LTrabA" class="cols-sm-2 control-label">Lugar de Trabajo:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="LTrabA" id="LTrabA"  placeholder="Lugar de Trabajo"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 form-group">
+              <label for="telTrabA" class="cols-sm-2 control-label">Teléfono de trabajo:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="telTrabA" id="telTrabA"  placeholder=""/>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 form-group">
+              <label for="parentesco" class="cols-sm-2 control-label">Parentesco:</label>
+              <div class="cols-sm-4">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="parentesco" id="parentesco"  placeholder="Parentesco"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="telPartA" class="cols-sm-2 control-label">Teléfono particular:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="telPartA" id="telPartA"  placeholder=""/>
+                </div>
+              </div>
+            </div>    
+            <div class="form-group">
+              <a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Guardar</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+

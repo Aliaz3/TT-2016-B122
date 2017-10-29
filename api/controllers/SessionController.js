@@ -57,9 +57,17 @@ module.exports = {
 				return res.redirect('/session/index');
 			}
 			
-			req.session.authenticated = true;
-			req.session.User = user;
-			res.redirect('/administrador/show/'+user.id);
+			if(user.tipo=="Administrador"){
+				req.session.authenticated = true;
+				req.session.User = user;
+				res.redirect('/administrador/AdminListadoUsuarios/');
+			}
+			if(user.tipo=="Trabajador Social"){
+				req.session.authenticated = true;
+				req.session.User = user;
+				res.redirect('/trabajoSocial/index/');
+			}
+			
 			});
 		});
 	},
