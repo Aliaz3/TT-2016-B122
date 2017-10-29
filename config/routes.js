@@ -63,26 +63,50 @@ module.exports.routes = {
   '/FAC48':{
     view: 'servicioMedico/FAC48'
   },
+  '/VFAC48':{
+    view: 'servicioMedico/VFAC48'
+  },
   '/FAC49':{
     view: 'servicioMedico/FAC49'
+  },
+  '/VFAC49':{
+    view: 'servicioMedico/VFAC49'
   },
   '/FAC50':{
     view: 'servicioMedico/FAC50'
   },
+  '/VFAC50':{
+    view: 'servicioMedico/VFAC50'
+  },
   '/FAC51':{
     view: 'servicioMedico/FAC51'
+  },
+  '/VFAC51':{
+    view: 'servicioMedico/VFAC51'
   },
   '/FAC71':{
     view: 'servicioMedico/FAC71'
   },
+  '/VFAC71':{
+    view: 'servicioMedico/VFAC71'
+  },
   '/FAC90':{
     view: 'servicioMedico/FAC90'
+  },
+  '/VFAC90':{
+    view: 'servicioMedico/VFAC90'
   },
   '/FAC98':{
     view: 'servicioMedico/FAC98'
   },
+  '/VFAC98':{
+    view: 'servicioMedico/VFAC98'
+  },
   '/FAC103':{
     view: 'servicioMedico/FAC103'
+  },
+  '/VFAC103':{
+    view: 'servicioMedico/VFAC103'
   },
   '/Session/new':{
     view:'Session/new'
@@ -90,28 +114,46 @@ module.exports.routes = {
   '/ss/BienvenidaTS':{
     view: 'ss/BienvenidaTS'
   },
-  '/ss/FAC11':{
+  '/FAC11':{
     view: 'ss/FAC11'
   },
-  '/ss/FAC13':{
+  '/VFAC11':{
+    view: 'ss/VFAC11'
+  },
+  '/FAC13':{
     view: 'ss/FAC13'
   },
-  '/ss/FAC14':{
+  '/VFAC13':{
+    view: 'ss/VFAC13'
+  },
+  '/FAC14':{
     view: 'ss/FAC14'
   },
-  '/ss/FAC144':{
+  '/VFAC14':{
+    view: 'ss/VFAC14'
+  },
+  '/FAC144':{
     view: 'ss/FAC144'
   },
-  '/ss/FAC130':{
+  '/VFAC144':{
+    view: 'ss/VFAC144'
+  },
+  '/FAC130':{
     view: 'ss/FAC130'
   },
-  '/ss/FAC131':{
+  '/VFAC130':{
+    view: 'ss/VFAC130'
+  },
+  '/FAC131':{
     view: 'ss/FAC131'
   },
-  '/ss/nuevoRepDiarioTS':{
+  '/VFAC131':{
+    view: 'ss/VFAC131'
+  },
+  '/nuevoRepDiarioTS':{
     view: 'ss/nuevoRepDiarioTS'
   },
-  '/ss/nuevoRepMens':{
+  '/nuevoRepMens':{
     view: 'ss/nuevoRepMens'
   },
   '/ss/paginaprincipal':{
@@ -120,10 +162,10 @@ module.exports.routes = {
   '/ss/pantallaInicial':{
     view: 'ss/pantallaInicial'
   },
-  '/ss/ReporteDiarioTS':{
+  '/ReporteDiarioTS':{
     view: 'ss/ReporteDiarioTS'
   },
-  '/ss/ReporteMensualTS':{
+  '/ReporteMensualTS':{
     view: 'ss/ReporteMensualTS'
   },
   '/ss/ReportesDiarios':{
