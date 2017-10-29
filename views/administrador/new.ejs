@@ -36,13 +36,6 @@
           <h2>Registrar nuevo usuario</h2>
           <section class="row text-center placeholders">
             <form action="/administrador/create" method ="POST" id="form-singin" class="form-signin col-sm-6">
-				<% if(flash && flash.err) { %>
-					<ul class="alert alert-success">
-				<% Object.keys(flash.err).forEach(function(error) { %>
-					<li><%- JSON.stringify(flash.err[error]) %></li>
-				<% }) %>
-				</ul>
-				<% } %>
 				<div class="control-group">
 				<input type="text" class="form-control" placeholder="Tipo Usuario" name="tipo">
 				</div>
