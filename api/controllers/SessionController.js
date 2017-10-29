@@ -8,7 +8,7 @@ var bcrypt = require('bcrypt');
 module.exports = {
 	index: function(req, res){
 		var Fechaant = new Date();
-		var Fechanew = new Date(Fechaant.getTime() + 60000);
+		var Fechanew = new Date(Fechaant.getTime() + 6000000);
 		req.session.cookie.expires = Fechanew;
 		console.log(req.session);
 		res.view('session/index');
