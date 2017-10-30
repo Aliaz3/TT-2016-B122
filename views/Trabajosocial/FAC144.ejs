@@ -51,7 +51,7 @@
       
       <p class="col-xs-6 col-md-offset-2"><b>Instrucciones:</b> Favor de ingresar los campos.</p>
       <div class="col-xs-6 col-md-offset-3">
-      <form class="" method="post" action="#">
+      <form class="" method="post" action="/Trabajosocial/Ingresoet">
             <div class="col-xs-8 form-group">
               <label for="cicloEsc" class="cols-sm-2 control-label">Ciclo Escolar:</label>
               <div class="cols-sm-10">
@@ -88,12 +88,8 @@
               <label for="nombreNino" class="cols-sm-2 control-label">Nombre del niño(a):</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
-                <select class="form-control" id="ninoName" name="ninoName">
-                  <option value="default" selected disabled hidden>--Seleccione--</option>
-                  <option value="alan">Alan Oswaldo Díaz Martínez</option>
-                  <option value="Jaqui">Jaqueline Henrandéz García</option>
-                </select>
+                  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="nombrenino" id="nombrenino"  placeholder="Nombre del chamaco"/>
                 </div>
               </div>
             </div>
@@ -206,9 +202,10 @@
                   <input type="text" class="form-control" name="telPartA" id="telPartA"  placeholder=""/>
                 </div>
               </div>
-            </div>    
+            </div> 
+            <input type="hidden" name="_csrf" value="<%= _csrf %>" />   
             <div class="form-group">
-              <a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Guardar</a>
+              <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Guardar</button>
             </div>
           </form>
         </div>
