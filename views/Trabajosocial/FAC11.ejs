@@ -89,7 +89,1613 @@
                       <p>Dinamica Familiar</p>
                     </div>
                     <div class="stepwizard-step">
-                      <a href="#step-10" type="button" class="btn btn-default btn-circle" disabled="disabled">10</a>
+                 <div class="nav-side-menu">
+  <div class="brand">Bienvenida @Trabajadora Social</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+          <div class="menu-list">
+    
+              <ul id="menu-content" class="menu-content collapse out">
+                  <li>
+                    <a href="/AgregarNuevaDosisMedico"><i class="fa fa-medkit" aria-hidden="true"></i>
+   Agregar Tratamiento</a>
+                  </li>
+
+                  <li  data-toggle="collapse" data-target="#facs" class="collapsed active">
+                    <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+  FAC's <span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="facs">
+                      <li><a href="/FAC48">FAC 11. Estudio socioeconómico</a></li>
+                      <li class="active"><a href="/FAC49">FAC 13. Ficha de reinscripción</a></li>
+                      <li><a href="/FAC50">FAC 14. Ficha de identificación</a></li>
+                      <li><a href="/FAC51">FAC 130. Indicaciones para los derechohabientes</a></li>
+                      <li><a href="/FAC71">FAC 131. Carta compromiso</a></li>
+                      <li><a href="/FAC90">FAC 144. Ingreso en trámite</a></li>
+                      <li><a href="/FAC98">FAC 98. Administración de Medicamentos</a></li>
+                  </ul>
+              </ul>
+          </div>
+      </div>
+  <div class="container-fluid contenido">
+    <div class="row contenido-usr">
+      <h3><b>Aviso de Suspensión por Enfermedad</b></h3>
+      <p class="col-xs-6 col-md-offset-2"><b>Instrucciones:</b> Favor de ingresar los campos.</p>
+        
+        <div class="stepwizard col-md-offset-3">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step">
+              <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+              <p>Datos niño.</p>
+            </div>
+            <div class="stepwizard-step">
+              <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+              <p>&nbspDatos derechohabiente.</p>
+            </div>
+            <div class="stepwizard-step">
+              <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+              <p>&nbspDatos padre.</p>
+            </div>
+
+            <div class="stepwizard-step">
+              <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+              <p>&nbspDatos persona autorizada.</p>
+            </div>
+
+            <div class="stepwizard-step">
+              <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+              <p>&nbspEconomía familiar I.</p>
+            </div>
+
+            <div class="stepwizard-step">
+              <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+              <p>&nbspEconomía familiar II.</p>
+            </div>
+
+            <div class="stepwizard-step">
+              <a href="#step-7" type="button" class="btn btn-default btn-circle" disabled="disabled">7</a>
+              <p>&nbspEstructura familiar.</p>
+            </div>
+
+            <div class="stepwizard-step">
+              <a href="#step-8" type="button" class="btn btn-default btn-circle" disabled="disabled">8</a>
+              <p>&nbspDinámica familiar.</p>
+            </div>
+
+
+            <div class="stepwizard-step">
+              <a href="#step-9" type="button" class="btn btn-default btn-circle" disabled="disabled">9</a>
+              <p>&nbspIngreso al CENDI.</p>
+            </div>
+
+
+          </div>
+         </div>
+  
+
+  <form role="form" action="" method="post">
+    <div class="row setup-content" id="step-1">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Datos del niño</h3>
+<div align="center"> 
+
+<img id="image" width="140" height="140" />
+<input type="file" name="imagen" id="upload" value="Fotografía del niño">
+
+<script>
+document.getElementById("upload").onchange = function() {
+  var reader = new FileReader(); //instanciamos el objeto de la api FileReader
+ 
+  reader.onload = function(e) {
+    //en el evento onload del FileReader, asignamos el path a el src del elemento imagen de html
+    document.getElementById("image").src = e.target.result;
+  };
+ 
+  // read the image file as a data URL.
+  reader.readAsDataURL(this.files[0]);
+};
+</script>
+</div>
+
+          <div class="form-group">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="fecha" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Grupo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <select class="form-control" id="grupo" name="grupo">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="Maternal I">Maternal I</option>
+                  <option value="Maternal II">Maternal II</option>
+                  <option value="Maternal III">Maternal III</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Nombre del Niño:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="alan">Alan Oswaldo Díaz Martínez</option>
+                  <option value="Jaqui">Jaqueline Henrandéz García</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de nacimiento:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="nacimienton" id="nacimienton" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4} min="2010-01-01"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+         
+
+<div>
+    <div style="float:left;width: 45%;">
+       <label class="cols-sm-2 control-label">Años</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="ceroa">0</option>
+                  <option value="unoa">1</option>
+                  <option value="dosa">2</option>
+                  <option value="tresa">3</option>
+                  <option value="cuatroa">4</option> 
+                  <option value="cincoa">5</option>
+                  <option value="seisa">6</option>
+                </select>
+              </div>
+            </div>
+           
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+<label class="cols-sm-2 control-label">Meses</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="cero">0</option>
+                  <option value="uno">1</option>
+                  <option value="dos">2</option>
+                  <option value="tres">3</option>
+                  <option value="cuatro">4</option> 
+                  <option value="cinco">5</option>
+                  <option value="seis">6</option>
+                  <option value="siete">7</option>
+                  <option value="ocho">8</option> 
+                  <option value="nueve">9</option>
+                  <option value="diez">10</option>
+                  <option value="once">11</option>
+                </select>
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+
+<div>
+    <div style="float:left;width: 45%;">
+       <label class="cols-sm-2 control-label">Grupo a cursar:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <select class="form-control" id="grupo" name="grupo">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="Maternal I">Maternal I</option>
+                  <option value="Maternal II">Maternal II</option>
+                  <option value="Maternal III">Maternal III</option>
+                </select>
+              </div>
+            </div>
+           
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+ <label class="cols-sm-2 control-label">Lugar de hermano</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="primero">Primero</option>
+                  <option value="segundo">Segundo</option>
+                  <option value="tercero">Tercero</option>
+                  <option value="cuarto">Cuarto</option>
+                  <option value="quinto">Quinto</option> 
+                  <option value="sexto">Sexto</option>
+                  <option value="septimo">Septimo</option>
+                </select>
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Dirección:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+              <textarea name="direccionn" cols="50" rows="4" placeholder="Ingrese la dirección del niño"></textarea>
+              </div>
+            </div>
+          </div> 
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+
+         
+    <div class="row setup-content" id="step-2">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Datos del derechohabiente</h3>
+
+ <div id="vista_previa"><!-- miniatura --></div>
+ 
+<div align="center">
+<img id="image" width="140" height="140" />   
+<form action="#" method="post" id="subearchivos">
+    <input type="file" id="archivos" name="archivos" />
+        <input type="button" value="cancelar"  style="display: none;" onclick="cancela('subearchivos');" id="resetear" />
+</form>
+    <script>
+    if (window.FileReader) {
+      function seleccionArchivo(evt) {
+        var files = evt.target.files;
+        var f = files[0];
+        var leerArchivo = new FileReader();
+       // document.getElementById('resetear').style.display= 'block';
+          leerArchivo.onload = (function(elArchivo) {
+            return function(e) {
+              document.getElementById('vista_previa').innerHTML = '<img src="'+ e.target.result +'" alt="" width="140" />';
+            };
+          })(f);
+    
+          leerArchivo.readAsDataURL(f);
+      }
+     } else {
+      document.getElementById('vista_previa').innerHTML = "El navegador no soporta vista previa";
+    }
+    
+      document.getElementById('archivos').addEventListener('change', seleccionArchivo, false);
+      
+    </script>
+</div>
+<br>
+
+           <div class="form-group">
+            <label class="cols-sm-2 control-label">Nombre del derechohabiente:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="nombred" required="required" class="form-control" placeholder="Ingrese el nombre del Padre o tutor" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+         
+      
+<div>
+   
+    
+    <div style="float:left;width: 45%;">
+                <label class="cols-sm-2 control-label">Lugar de nacimiento:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" name="lugard" required="required" class="form-control" placeholder="lugar de nacimiento" minlength="2" maxlength="50" />
+              </div>
+            </div>
+                      </div>
+
+                       <div style="float:right;width: 45%;">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de nacimiento:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="nacimientod" id="nacimienton" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4} min="2010-01-01"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+   </div>
+          
+
+    </div>    
+    
+<div style="clear:both"></div>
+         
+
+
+          
+<div>
+   
+    
+    <div style="float:left;width: 45%;">
+              
+            <label class="cols-sm-2 control-label">Estado civil:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-adress-card-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="civild">
+                  <option disabled selected value> -- Selecciona una opción -- </option>
+                 <option value="solterop">Soltero</option>
+                  <option value="casadop">Casado</option>
+                  <option value="divorciadop">Divorciado</option>
+                  <option value="viudop">Viudo</option>
+                  <option value="separadop">Separado</option>
+                  <option value="unionp">Unión libre</option>
+                </select>
+
+              </div>
+            </div>
+                      </div>
+
+                       <div style="float:right;width: 45%;">
+              <label class="cols-sm-2 control-label">Ocupación:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="ocupaciond" required="required" class="form-control" placeholder="Ingrese su ocupación" minlength="2" maxlength="50" />
+              </div>
+            </div>
+            </div>
+
+   </div>
+
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Adscripción:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-shield" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="adscripciond" required="required" class="form-control" placeholder="Ingrese el lugar de adscripción" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Dirección del trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+              <textarea name="direcciond" cols="50" rows="4" placeholder="Ingrese la dirección del niño"></textarea>
+              </div>
+            </div>
+          </div> 
+
+
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+ <label class="cols-sm-2 control-label">Teléfono local:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="telefonod" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          </div>
+    <div style="float:right;width: 45%;">
+       <label class="cols-sm-2 control-label">Extención:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{5}" name="extd" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+<div>
+    <div style="float:left;width: 40%;">
+      
+       <label class="cols-sm-2 control-label">Hora de entrada</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                       <input type="time" name="hrentradad" required="">
+                        </div>
+            </div>
+    </div>
+    <div style="float:right;width: 45%;">
+      <label class="cols-sm-2 control-label">Hora de salida</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                       <input type="time" name="hrsalidad" required="">
+                        </div>
+            </div>
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+
+
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+ <label class="cols-sm-2 control-label">Teléfono local:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="telefonod" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          </div>
+    <div style="float:right;width: 45%;">
+       <label class="cols-sm-2 control-label">Celular:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="celd" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+          
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Escolaridad:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="escolaridadd" required="required" class="form-control" placeholder="Ingrese su escolaridad" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row setup-content" id="step-3">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Datos del padre</h3>
+
+
+
+           <div class="form-group">
+            <label class="cols-sm-2 control-label">Nombre del Padre:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="nombrep" required="required" class="form-control" placeholder="Ingrese el nombre del Padre o tutor" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+         
+<div>
+   
+    
+    <div style="float:left;width: 45%;">
+                <label class="cols-sm-2 control-label">Lugar de nacimiento:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" name="lugarp" required="required" class="form-control" placeholder="lugar de nacimiento" minlength="2" maxlength="50" />
+              </div>
+            </div>
+                      </div>
+
+                       <div style="float:right;width: 45%;">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de nacimiento:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="nacimientop" id="nacimienton" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4} min="2010-01-01"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+   </div>
+           
+    
+<div style="clear:both"></div>
+         
+
+
+          
+<div>
+   
+    
+    <div style="float:left;width: 45%;">
+              
+            <label class="cols-sm-2 control-label">Estado civil:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-adress-card-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option disabled selected value> -- Selecciona una opción -- </option>
+                 <option value="solterop">Soltero</option>
+                  <option value="casadop">Casado</option>
+                  <option value="divorciadop">Divorciado</option>
+                  <option value="viudop">Viudo</option>
+                  <option value="separadop">Separado</option>
+                  <option value="unionp">Unión libre</option>
+                </select>
+
+              </div>
+            </div>
+                      </div>
+
+                       <div style="float:right;width: 45%;">
+              <label class="cols-sm-2 control-label">Ocupación:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="ocupacionp" required="required" class="form-control" placeholder="Ingrese su ocupación" minlength="2" maxlength="50" />
+              </div>
+            </div>
+            </div>
+
+   </div>
+
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Lugar de trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-shield" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="lugartp" required="required" class="form-control" placeholder="Ingrese el lugar de trabajo" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Dirección del trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+              <textarea name="direccionp" cols="50" rows="4" placeholder="Ingrese la dirección del niño"></textarea>
+              </div>
+            </div>
+          </div> 
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+ <label class="cols-sm-2 control-label">Teléfono local:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="telefonop" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          </div>
+    <div style="float:right;width: 45%;">
+       <label class="cols-sm-2 control-label">Extención:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{5}" name="extp" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+<div>
+    <div style="float:left;width: 40%;">
+      
+       <label class="cols-sm-2 control-label">Hora de entrada</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                       <input type="time" name="hrentradap" required="">
+                        </div>
+            </div>
+    </div>
+    <div style="float:right;width: 45%;">
+      <label class="cols-sm-2 control-label">Hora de salida</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                       <input type="time" name="hrsalidap" required="">
+                        </div>
+            </div>
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+ <label class="cols-sm-2 control-label">Teléfono local:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="telefonop" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          </div>
+    <div style="float:right;width: 45%;">
+       <label class="cols-sm-2 control-label">Celular:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="celp" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Escolaridad:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="escolaridadp" required="required" class="form-control" placeholder="Ingrese su escolaridad" minlength="2" maxlength="50" />
+              </div>
+            </div>
+         </div>
+           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+      <!-- <button class="btn btn-success btn-lg pull-right" type="submit">Guardar</button> -->
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+      <div class="row setup-content" id="step-4">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Datos de la persona autorizada para recoger al niño</h3>
+
+<div align="center">
+
+<img id="image" width="140" height="140" />
+<output id="list"></output>
+<input type="file" id="files" name="files[]" />
+<br />
+
+
+ <script>
+              function archivo(evt) {
+                  var files = evt.target.files; // FileList object
+             
+                  // Obtenemos la imagen del campo "file".
+                  for (var i = 0, f; f = files[i]; i++) {
+                    //Solo admitimos imágenes.
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+             
+                    var reader = new FileReader();
+             
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                          // Insertamos la imagen
+                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                        };
+                    })(f);
+             
+                    reader.readAsDataURL(f);
+                  }
+              }
+             
+              document.getElementById('files').addEventListener('change', archivo, false);
+      </script>
+</div>
+
+
+
+
+           <div class="form-group">
+            <label class="cols-sm-2 control-label">Nombre de la persona autorizada:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" name="nombrepa" required="required" class="form-control" placeholder="Ingrese el nombre de la persona autorizada" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+    
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+            <label class="cols-sm-2 control-label">Parentezco con el niño:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-adress-card-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="parentezcopa">
+             <option disabled selected value> -- Seleccione una opción -- </option>
+  <option value="padrepa">Padre</option>
+  <option value="madrepa">Madre</option>
+  <option value="abuelopa">Abuelo</option>
+  <option value="abuelapa">Abuela</option>
+  <option value="tiopa">Tío</option>
+  <option value="tiapa">Tía</option>
+  <option value="tutorpa">Tutor</option>
+</select>
+
+              </div>
+            </div> 
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+
+          
+            <label class="cols-sm-2 control-label">Lugar de nacimiento:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" name="lugarpa" required="required" class="form-control" placeholder="Indique lugar de nacimiento" minlength="2" maxlength="50" />
+              </div>
+            </div>
+        
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+          <label class="cols-sm-2 control-label">Estado civil:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-adress-card-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+                  <option disabled selected value> -- Selecciona una opción -- </option>
+                <option value="solteropa">Soltero</option>
+                  <option value="casadopa">Casado</option>
+                  <option value="divorciadopa">Divorciado</option>
+                  <option value="viudopa">Viudo</option>
+                  <option value="separadopa">Separado</option>
+                  <option value="unionpa">Unión libre</option>
+                </select>
+
+              </div>
+          </div>   
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+
+            <label class="cols-sm-2 control-label">Ocupación:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="ocupacionpa" required="required" class="form-control" placeholder="Ingrese su ocupación" minlength="2" maxlength="50" />
+              </div>
+          </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+<div>
+    <div style="float:left;width: 47%;">
+      
+         
+            <label class="cols-sm-2 control-label">Escolaridad:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="escolaridadpa" required="required" class="form-control" placeholder="Ingrese escolaridad" minlength="2" maxlength="50" />
+              </div>
+            </div>
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+
+     
+            <label class="cols-sm-2 control-label">Lugar de trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-shield" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="lugartpa" required="required" class="form-control" placeholder="Lugar de trabajo" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+         <label class="cols-sm-2 control-label">Hora de entrada</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                       <input type="time" name="hrentradapa" required="">
+                        </div>
+            </div>
+
+
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+
+     
+             <label class="cols-sm-2 control-label">Hora de salida</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                       <input type="time" name="hrsalidapa" required="">
+                        </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+     
+            <label class="cols-sm-2 control-label">Celular:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="celpa" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+
+     
+            
+            <label class="cols-sm-2 control-label">Teléfono local:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="telefonopa" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Dirección del trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+              <textarea name="direccionpa" cols="50" rows="4" placeholder="Ingrese la dirección de la persona autorizada"></textarea>
+              </div>
+            </div>
+          </div> 
+
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+
+<div class="row setup-content" id="step-5">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Economía familiar I</h3>
+
+          
+
+
+ <div class="form-group">
+
+    <td>
+      <table><tr><td>
+
+<tr>
+    <th colspan="2">Ingresos mensuales</th>
+  </tr>
+
+  <tr>
+    <th>Padre:</th>
+    <td>
+      <div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+    </td>
+    
+    <th>Madre:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+  </tr>
+
+  <tr>
+    <th>Hijos:</th>
+    <td>
+      <div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+    </td>
+    
+    <th>Otros:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+  </tr>
+
+
+  <tr>
+    <th>Total:</th>
+    <td>
+      
+      <div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+  </tr>
+
+  </table>
+</div>
+
+ <div class="form-group">
+<br>
+ <table align="left"><tr><td>
+<tr>
+    <th colspan="4">Egresos mensuales</th>
+  </tr>
+
+  <tr>
+    <th>Alimentación:</th>
+    <td>
+      <div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+    </td>
+    
+    <th>Medicinas:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+  </tr>
+
+  <tr>
+    <th>Renta o predial:</th>
+    <td>
+      <div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+    </td>
+    
+    <th>Ayuda a familiares:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+    </tr>
+  
+
+  <tr>
+    <th>Agua:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+<th>Diversiones:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+
+    </td>
+  </tr>
+
+
+  <tr>
+    <th>Luz:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+    
+    <th>Teléfono:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+  </tr>
+
+<tr>
+    <th>Gas:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+    <th>Otros:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+  </tr>
+
+
+
+<tr>
+    <th>Ropa:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+    <th>Transporte:</th>
+    <td>
+      
+<div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+    
+  </tr>
+
+  <tr>
+    <th>Total:</th>
+    <td  colspan="3">
+      
+      <div class="form-group">
+     <br>  <input type="number" name="del" placeholder="$0.00" required pattern="[0-9]+">
+        </div>
+
+    </td>
+  </tr>
+  
+  </table>
+  </div>
+
+
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+
+
+
+
+
+<!--<button class="btn btn-success btn-lg pull-right" type="submit">Guardar</button>-->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+      <div class="row setup-content" id="step-6">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Economía familiar II</h3>
+
+
+
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Tipo de vivienda</label> <br>
+
+Casa sola: <input type="checkbox" name="casaSola" value="">
+&nbsp&nbsp&nbspCondominio:<input type="checkbox" name="condominio" value="">
+
+ &nbsp&nbsp&nbsp&nbsp&nbspDepartamento:<input type="checkbox" name="departamento" value="">
+
+  &nbspVecindad:<input type="checkbox" name="vecindad" value="">
+
+ 
+ &nbsp&nbsp&nbsp&nbsp&nbspOtra <input type="text" name="otraVivienda">
+<br><br>
+</div>
+
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Tenencia</label> <br>
+
+Propia: <input type="checkbox" name="propia" value="">
+&nbsp&nbsp&nbsp&nbsp&nbspPrestada:<input type="checkbox" name="prestada" value="">
+
+ &nbsp&nbsp&nbsp&nbsp&nbspA crédito:<input type="checkbox" name="credito" value="">
+
+  &nbspRentada:<input type="checkbox" name="rentada" value="">
+<br><br>
+</div>
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Área</label> <br>
+
+Urbana: <input type="checkbox" name="urbana" value="">
+&nbsp&nbsp&nbsp&nbsp&nbspSuburbana:<input type="checkbox" name="suburbana" value="">
+
+ &nbsp&nbsp&nbsp&nbsp&nbspRural:<input type="checkbox" name="rural" value="">
+<br><br>
+</div>
+
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Condiciones materiales del inmueble:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+              <textarea name="condiciones" cols="50" rows="2" placeholder="Ingrese en que condiciones se encuentra el inmueble"></textarea>
+              </div>
+            </div>
+          </div> 
+          
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Servicios con los que cuenta la vivienda:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              <textarea name="servicios" cols="50" rows="2" placeholder="Ingrese los servicios con los que cuenta la vivienda"></textarea>
+              </div>
+            </div>
+          </div>  
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Descripción de la vivienda:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-commenting" aria-hidden="true"></i></span>
+              <textarea name="descripcion" cols="50" rows="2" placeholder="Describa la vivienda"></textarea>
+              </div>
+            </div>
+          </div> 
+
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="row setup-content" id="step-7">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Estructura familiar</h3>
+
+
+
+ <div class="form-group">
+
+            <label class="cols-sm-2 control-label">Datos de las personas que conviven con el niño frecuentemente</label>
+            <label class="cols-sm-2 control-label">Nombre:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="nombrepc" required="required" class="form-control" placeholder="Ingrese el nombre de la persona" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+
+
+           
+         
+ 
+
+
+   <div>
+    <div style="float:left;width: 45%;">
+      
+      <label class="cols-sm-2 control-label">Edad:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span>
+                <input type="number"  pattern="[0-9]{10}" name="telefonopc" required="required" class="form-control" placeholder="10 dígitos" />
+              </div>
+            </div>
+
+
+
+
+          </div>
+    <div style="float:right;width: 45%;">
+      
+
+     
+            
+            <label class="cols-sm-2 control-label">Parentezco con el niño:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+             <option disabled selected value> -- Seleccione una opción -- </option>
+  <option value="padrepc">Padre</option>
+  <option value="madrepc">Madre</option>
+  <option value="abuelopc">Abuelo</option>
+  <option value="abuelapc">Abuela</option>
+  <option value="tiopc">Tío</option>
+  <option value="tiapc">Tía</option>
+  <option value="tutorpc">Tutor</option>
+</select>
+
+            </div>
+          </div>  
+
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+
+<div>
+    <div style="float:left;width: 45%;">
+      
+       <label class="cols-sm-2 control-label">&nbsp Ocupación:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="ocupacionpc" required="required" class="form-control" placeholder="Ingresa ocupación" minlength="2" maxlength="50" />
+              </div>
+          </div>
+
+
+
+
+
+          </div>
+    <div style="float:right;width: 49%;">
+      
+
+      <label class="cols-sm-2 control-label">Escolaridad:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="escolaridadpc" required="required" class="form-control" placeholder="Ingresa escolaridad" minlength="2" maxlength="50" />
+              </div>
+            </div>
+            
+          
+
+    </div>    
+</div>
+<div style="clear:both"></div>
+
+
+
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Servicio médico</label> <br>
+
+ISSTE: <input type="checkbox" name="isste" value="">
+&nbsp&nbsp&nbsp&nbsp&nbspIMSS:<input type="checkbox" name="imss" value="">
+
+ &nbsp&nbsp&nbsp&nbsp&nbspParticular:<input type="checkbox" name="particular" value="">
+
+<br><br>
+ 
+ &nbsp&nbsp&nbsp&nbsp&nbspOtra <input type="text" name="otraVivienda">
+<br><br>
+</div>
+
+
+
+           <div class="form-group">
+            <label class="cols-sm-2 control-label">Frecuencia con la que asiste al médico:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="frecuenciam" required="required" class="form-control" placeholder="Ingrese la frecuencia con la que asiste al médico" minlength="2" maxlength="100" />
+              </div>
+            </div>
+          </div>
+
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Diagnóstico:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+              <textarea name="diagnostico" cols="50" rows="4" placeholder="Ingrese el diagnóstico del paciente"></textarea>
+              </div>
+            </div>
+          </div> 
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+      
+
+      <div class="row setup-content" id="step-8">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Dinámica familiar</h3>
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Describa la dinámica familiar <br>¿Fué deseado el embarazo?<br>¿Cuenta con habitación propia el niño?</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+              <textarea name="dinamica" cols="50" rows="4" placeholder="Describa la dinámica familiar"></textarea>
+              </div>
+            </div>
+          </div> 
+
+
+   <div class="form-group">
+            <label class="cols-sm-2 control-label">Nombre de la persona que cuida al niño cuando no asiste al CENDI:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" name="nombreperso" required="required" class="form-control" placeholder="Ingrese el nombre de la persona que atiende al niño cuando no asiste al CENDI" minlength="2" />
+              </div>
+            </div>
+          </div>
+
+
+<div class="form-group" id="derecha">
+            <label class="cols-sm-2 control-label">Parentezco con el niño:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                <select class="form-control" id="ninoName" name="ninoName">
+             <option disabled selected value> -- Seleccione una opción -- </option>
+  <option value="padreperso">Padre</option>
+  <option value="madreperso">Madre</option>
+  <option value="abueloperso">Abuelo</option>
+  <option value="abuelaperso">Abuela</option>
+  <option value="tioperso">Tío</option>
+  <option value="tiaperso">Tía</option>
+  <option value="tutorperso">Tutor</option>
+</select>
+
+              </div>
+            </div>
+          </div>  
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Describa como es la relación del niño con esta persona</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+              <textarea name="relacion" cols="50" rows="4" placeholder="Describa la relación del niño con esta persona"></textarea>
+              </div>
+            </div>
+          </div> 
+
+
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+        </div>
+      </div>
+    </div>
+
+
+
+<div class="row setup-content" id="step-9">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Datos de ingreso al CENDI</h3>
+
+
+<div class="form-group">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de alta del niño:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="fechaaltan" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+
+<div class="form-group">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de ingreso del niño:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="fechaingreson" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+
+
+<div class="form-group">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de ingreso del niño(en caso de cambio de CENDI):</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="fechaingcambion" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+<div class="form-group">
+            <label class="cols-sm-2 control-label">Lugar de procedencia:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                <input type="text" name="lugarprocn" required="required" class="form-control" placeholder="Indique lugar de procedencia" minlength="2" maxlength="50" />
+              </div>
+            </div>
+          </div>
+
+
+
+<div class="form-group">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de baja del CENDI:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="fechabaja" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Motivo</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
+              <textarea name="motivo" cols="50" rows="2S" placeholder="Describa el motivo de la baja del niño"></textarea>
+              </div>
+            </div>
+          </div> 
+
+ <div class="form-group">
+            <label class="cols-sm-2 control-label">Observaciones</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
+              <textarea name="obsbaja" cols="50" rows="2" placeholder="Describa las observaciones que se encuentren en la baja del niño"></textarea>
+              </div>
+            </div>
+          </div> 
+
+
+
+          <button class="btn btn-success btn-lg pull-right" type="submit">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+          
+    </div>
+  </div>
+
+     <a href="#step-10" type="button" class="btn btn-default btn-circle" disabled="disabled">10</a>
                       <p>Datos de ingreso al CENDI</p>
                     </div>
                   </div>
