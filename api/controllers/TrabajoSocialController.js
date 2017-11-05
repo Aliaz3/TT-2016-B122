@@ -21,12 +21,20 @@ module.exports = {
 	'FAC13': function(req,res){
 		res.view();
 	},
-	'FAC14': function(req,res{
+	'FAC14': function(req,res){
 		res.view();
 	},
 	Ingresoet : function (req, res, next){
 		var ojb = req.allParams();
 		console.log(ojb);
+	},
+	act130 : function (req, res, next){
+		src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js";
+		var doc = new jsPDF();
+		
+		doc.text('Hello world!', 10, 10);
+		doc.save('a4.pdf');
 	}
+	
 };
 
