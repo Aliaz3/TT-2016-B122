@@ -18,6 +18,12 @@ module.exports = {
 	'FAC11': function (req, res){
 		res.view();
 	},
+	'FAC13': function(req,res){
+		res.view();
+	},
+	'FAC14': function(req,res{
+		res.view();
+	},
 	Ingresoet : function (req, res, next){
 		var ojb = req.allParams();
 		console.log(ojb);
