@@ -81,6 +81,9 @@ module.exports.routes = {
   '/FAC51':{
     view: 'servicioMedico/FAC51'
   },
+  '/prueba':{
+    view: 'servicioMedico/prueba'
+  },
   '/VFAC51':{
     view: 'servicioMedico/VFAC51'
   },

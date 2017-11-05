@@ -1,0 +1,21 @@
+<div class="container-fluid contenido">
+    <div class="col-sm-6" style="height:130px;">
+         <form class="form-horizontal" action="" method="post">
+          <fieldset>
+            <legend class="text-center">Datetimepicker Bootstrap</legend>
+                  <div class='input-group date' id='divMiCalendario'>
+                      <input type='text' id="txtFecha" class="form-control"  readonly/>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
+          </fieldset>
+          </form>
+
+        </div>
+        <script type="text/javascript">
+     $('#divMiCalendario').datetimepicker({
+          format: 'YYYY-MM-DD HH:mm'       
+      });
+      $('#divMiCalendario').data("DateTimePicker").show();
+   </script>
+</div>
