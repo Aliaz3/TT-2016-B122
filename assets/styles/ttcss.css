@@ -385,4 +385,27 @@ code {
 
 .contenido{
   padding-top: 70px;
+<<<<<<< HEAD
 }
+.lista-fac-back{
+  background-color: #fff;
+  opacity: .6;
+}
+.lista-fac li{
+  padding:10px;
+  text-align: justify;
+  color:#000;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+=======
+}
+>>>>>>> 52293624073f8b1afa0a589334eaa36d5538c86e
