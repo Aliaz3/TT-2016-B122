@@ -386,16 +386,3 @@ code {
 .contenido{
   padding-top: 70px;
 }
-.lista-fac-back{
-  background-color: #fff;
-  opacity: .6;
-}
-.lista-fac li{
-  padding:10px;
-  text-align: justify;
-  color:#000;
-}
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}

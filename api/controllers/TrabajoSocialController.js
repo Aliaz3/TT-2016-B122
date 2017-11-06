@@ -29,11 +29,7 @@ module.exports = {
 		console.log(ojb);
 	},
 	act130 : function (req, res, next){
-		src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js";
-		var doc = new jsPDF();
 		
-		doc.text('Hello world!', 10, 10);
-		doc.save('a4.pdf');
 	}
 	
 };

@@ -45,15 +45,15 @@
 	            </ul>
 	        </div>
 	    </div>
-  <div class="container-fluid contenido">
-    <div class="row contenido-usr">
+  <div class="container-fluid contenido" >
+    <div class="row contenido-usr" >
       <h3 class="col-xs-10 col-md-offset-1"><b>Indicaciones para las Derechohabientes Trabajadores de la Coordinación de Centros de Desarrollo Infantil y Centros de Desarrollo Infantil que tienen a su hijo Inscrito en un CENDI o en el Centro de su Adscripción.</b></h3>
       
         
 
   
     
-<div class="col-xs-8 col-md-offset-2" >
+<div class="col-xs-8 col-md-offset-2" id="listita">
   <ol class="lista-fac"> 
     	<li>Entregar y recibir a su hijo en el filtro, cumpliendo con los horarios establecidos.
 En el horario de salida deberá solicitar la entrega de su hijo al personal asignado en filtro, debiendo
@@ -84,39 +84,34 @@ informada por escrito que se procederá al cambio de CENDI de su hijo.(aplica so
 hijo esté inscrito en el Centro de su adscripción).</li>
 </ol>
     <ol>
-<!--  
-<br> 1. Entregar y recibir a su hijo en el filtro, cumpliendo con los horarios establecidos.
-En el horario de salida deberá solicitar la entrega de su hijo al personal asignado en filtro, debiendo
-mostrar diariamente la credencial proporcionada por el CENDI. <BR><BR><BR>
-2. En relación a los asuntos relacionados con su hijo que puedan causarle incertidumbre, deberá dirigirse a la
-Directora del CENDI, para su canalización y atención conjunta con el Área Técnica correspondiente, en
-apego a los Lineamientos para la Operación de los Centros de Desarrollo Infantil del Instituto
-Politécnico Nacional vigentes.<br><BR><BR>
-3. Previa autorización de la Directora del CENDI la derechohabiente podrá participar en la clase abierta de su
-hijo, sin afectar las funciones que le corresponden en el CENDI, ni las actividades organizadas para tal
-evento. (aplica solo en caso de que su hijo (a) esté inscrito en el Centro de su adscripción). <br><BR><BR>
-4. No hacer visitas especificas al grupo de su hijo, para observarlo, sin autorización de la Directora, ni a través
-de terceros.<br><BR><BR>
-5. No intervendrá en el trabajo técnico y educativo del personal, respetando la rutina diaria de trabajo en el
-CENDI. <br><BR><BR>
-6. Acatar las indicaciones de la Directora y/o personal técnico del CENDI, que sean necesarias para coadyuvar
-al mejor desarrollo de su hijo, sobre todo las de tipo especializado.  <BR><BR><BR>
-7. En el caso de incumplimiento con alguna de las anteriores indicaciones o incurrir en alguna falta que ponga
-en riesgo la estabilidad de su hijo y/o del personal del CENDI se harán acreedoras a las siguientes
-sanciones: <br><BR><BR>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbspa) Dos amonestaciones verbales que deberán realizarse en presencia de algún integrante del Área Técnica y
-la Representación Sindical. <br><BR><BR>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbspb) La tercera amonestación será por escrito y deberá ser entregada en presencia de algún integrante del
-Área Técnica y la Representación Sindical. <br><BR><BR>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbspc) De incurrir por cuarta vez en cualquiera de las presentes indicaciones la Derechohabiente será
-informada por escrito que se procederá al cambio de CENDI de su hijo.(aplica solo en caso de que su
-hijo esté inscrito en el Centro de su adscripción).
-.
-!-->
   </div>
+  </br>
 </div>
-<form role="form" action="act130" method="post" class="col-md-2 col-centered text-center">
-<input type="hidden" name="_csrf" value="<%= _csrf %>" />
-<input type="submit" class="btn btn-info col-md-offset-6" value="Imprimir">
-</form>        
+<button onclick="imprime('listita')" class="btn btn-info col-md-offset-6">Imprimir</button>      
 </div>
+
+<script>
+function imprime(divName) {
+var printContents = document.getElementById(divName).innerHTML;
+var originalContents = document.body.innerHTML;
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd = '0'+dd
+} 
+
+if(mm<10) {
+    mm = '0'+mm
+} 
+
+today = mm + '/' + dd + '/' + yyyy;
+var msj='INDICACIONES PARA LAS DERECHOHABIENTES TRABAJADORAS DE LA COORDINACIÓN DE CENTROS DE DESARROLLO INFANTIL Y CENTROS DE DESARROLLO INFANTIL QUE TIENEN A SU HIJO INSCRITO EN UN CENDI O EN EL CENTRO DE SU ADSCRIPCIÓN.';
+var msjb = msj.bold();
+    document.body.innerHTML = msjb+printContents+'Ciudad de México a '+dd+' de '+mm+' de '+ yyyy;
+    window.print();
+	document.body.innerHTML = originalContents;
+}
+</script>
