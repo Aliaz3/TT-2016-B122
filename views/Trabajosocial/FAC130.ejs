@@ -92,8 +92,10 @@ hijo esté inscrito en el Centro de su adscripción).</li>
 
 <script>
 function imprime(divName) {
+//var jspdf = require("jspdf");
+window.alert(divName);
 var printContents = document.getElementById(divName).innerHTML;
-var originalContents = document.body.innerHTML;
+/*var originalContents = document.body.innerHTML;
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0!
@@ -112,6 +114,9 @@ var msj='INDICACIONES PARA LAS DERECHOHABIENTES TRABAJADORAS DE LA COORDINACIÓN
 var msjb = msj.bold();
     document.body.innerHTML = msjb+printContents+'Ciudad de México a '+dd+' de '+mm+' de '+ yyyy;
     window.print();
-	document.body.innerHTML = originalContents;
+	document.body.innerHTML = originalContents;*/
+	var doc = new jsPDF();
+	doc.text(printContents,10,200);
+	doc.save('a4.pdf')
 }
 </script>
