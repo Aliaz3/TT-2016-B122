@@ -87,36 +87,8 @@ hijo esté inscrito en el Centro de su adscripción).</li>
   </div>
   </br>
 </div>
-<button onclick="imprime('listita')" class="btn btn-info col-md-offset-6">Imprimir</button>      
+<form action="/Trabajosocial/act130" method ="POST" id="form-singin" class="form-signin col-sm-6">
+<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+<button type="submit" class="btn btn-primary btn-block">Generar</button>
+</form>  
 </div>
-
-<script>
-function imprime(divName) {
-//var jspdf = require("jspdf");
-window.alert(divName);
-var printContents = document.getElementById(divName).innerHTML;
-/*var originalContents = document.body.innerHTML;
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
-
-if(dd<10) {
-    dd = '0'+dd
-} 
-
-if(mm<10) {
-    mm = '0'+mm
-} 
-
-today = mm + '/' + dd + '/' + yyyy;
-var msj='INDICACIONES PARA LAS DERECHOHABIENTES TRABAJADORAS DE LA COORDINACIÓN DE CENTROS DE DESARROLLO INFANTIL Y CENTROS DE DESARROLLO INFANTIL QUE TIENEN A SU HIJO INSCRITO EN UN CENDI O EN EL CENTRO DE SU ADSCRIPCIÓN.';
-var msjb = msj.bold();
-    document.body.innerHTML = msjb+printContents+'Ciudad de México a '+dd+' de '+mm+' de '+ yyyy;
-    window.print();
-	document.body.innerHTML = originalContents;*/
-	var doc = new jsPDF();
-	doc.text(printContents,10,200);
-	doc.save('a4.pdf')
-}
-</script>
