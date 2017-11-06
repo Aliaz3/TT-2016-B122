@@ -111,72 +111,6 @@ module.exports.routes = {
   '/VFAC103':{
     view: 'servicioMedico/VFAC103'
   },
-  '/Session/new':{
-    view:'Session/new'
-  },
-  '/ss/BienvenidaTS':{
-    view: 'ss/BienvenidaTS'
-  },
-  '/FAC11':{
-    view: 'ss/FAC11'
-  },
-  '/VFAC11':{
-    view: 'ss/VFAC11'
-  },
-  '/FAC13':{
-    view: 'ss/FAC13'
-  },
-  '/VFAC13':{
-    view: 'ss/VFAC13'
-  },
-  '/FAC14':{
-    view: 'ss/FAC14'
-  },
-  '/VFAC14':{
-    view: 'ss/VFAC14'
-  },
-  '/FAC144':{
-    view: 'ss/FAC144'
-  },
-  '/VFAC144':{
-    view: 'ss/VFAC144'
-  },
-  '/FAC130':{
-    view: 'ss/FAC130'
-  },
-  '/VFAC130':{
-    view: 'ss/VFAC130'
-  },
-  '/FAC131':{
-    view: 'ss/FAC131'
-  },
-  '/VFAC131':{
-    view: 'ss/VFAC131'
-  },
-  '/nuevoRepDiarioTS':{
-    view: 'ss/nuevoRepDiarioTS'
-  },
-  '/nuevoRepMens':{
-    view: 'ss/nuevoRepMens'
-  },
-  '/ss/paginaprincipal':{
-    view: 'ss/paginaprincipal'
-  },
-  '/ss/pantallaInicial':{
-    view: 'ss/pantallaInicial'
-  },
-  '/ReporteDiarioTS':{
-    view: 'ss/ReporteDiarioTS'
-  },
-  '/ReporteMensualTS':{
-    view: 'ss/ReporteMensualTS'
-  },
-  '/ss/ReportesDiarios':{
-    view: 'ss/ReportesDiarios'
-  },
-  '/ss/ReportesMensuales':{
-    view: 'ss/ReportesMensuales'
-  },
   '/Trabajador/edit':{
     view: 'Trabajador/edit'
   },
@@ -204,9 +138,6 @@ module.exports.routes = {
     view: 'user/new'
   },'/user/show':{
     view: 'user/show'
-  },
-  '/user-padreFam/autentication':{
-    view: 'user-padreFam/autentication'
   },
   '/user-padreFam/HistorialMedico':{
     view: 'user-padreFam/HistorialMedico'
