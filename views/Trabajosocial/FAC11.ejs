@@ -90,7 +90,7 @@
           </div>
          </div>
          <!-- inicia el form fac 11 -->
-         <form role="form" action="" method="post">
+    <form role="form" action="/Trabajosocial/guardardatos" method="POST">
           <!-- paso 1. Datos del niño(a) -->
 
     <div class="row setup-content" id="step-1">
@@ -1538,8 +1538,8 @@ ISSTE: <input type="checkbox" name="isste" value="">
           </div> 
 
 
-
-          <button class="btn btn-success btn-lg pull-right" type="submit">Guardar</button>
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+        <input type="submit" class="btn btn-success btn-lg pull-right" value="guardar"/>
         </div>
       </div>
     </div>

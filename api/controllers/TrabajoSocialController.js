@@ -91,6 +91,10 @@ module.exports = {
 				pdfWriter.end();
 				console.log("fin");
 				res.redirect('/Trabajosocial/');
+	},
+	guardardatos : function(req, res, next){
+		var ojb = req.allParams();
+		console.log(ojb);
 	}
 	
 };
