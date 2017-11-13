@@ -90,7 +90,7 @@
           </div>
          </div>
          <!-- inicia el form fac 11 -->
-    <form role="form" action="/Trabajosocial/guardardatos" method="POST">
+    
           <!-- paso 1. Datos del niño(a) -->
 
     <div class="row setup-content" id="step-1">
@@ -327,6 +327,7 @@
       </div>
     </div>
     <!-- Termina paso 1-->
+
     <!-- Paso 2. Datos derechohabiente-->
     <div class="row setup-content" id="step-2">
       <div class="col-xs-6 col-md-offset-3">
@@ -756,6 +757,7 @@
       </div>
     </div>
     <!--inicio paso 4 -->
+	    	<form role="form" action="/Trabajosocial/guardardatos" method="POST">
     <div class="row setup-content" id="step-4">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -971,8 +973,10 @@
         </div>
       </div>
     </div>
-    <!--fin paso 4 -->
-    <!--inicia paso 5-->
+    
+	<!--fin paso 4 -->
+
+	<!--inicia paso 5-->
     <div class="row setup-content" id="step-5">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -1148,6 +1152,7 @@
       </div>
     </div>
     <!-- Termina paso 5-->
+	
     <div class="row setup-content" id="step-6">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -1156,6 +1161,7 @@
 
 
 <label class="cols-xs-12">Tipo de vivienda:</label>
+
 <div class="form-group">
 
 <label class="col-xs-2 radio-inline"><input type="radio" name="tipoV" value="casaSola">Casa sola</label>
@@ -1165,23 +1171,28 @@
 <label class="col-xs-2 radio-inline"><input type="radio" name="tipoV" value="otravivienda">Otra</label>
 </div>
 </br>
+
 <label class="cols-xs-12">Tenencia:</label>
+
 <div class="form-group">
-            
+
 <label class="col-xs-2 radio-inline"><input type="radio" name="tenencia" value="propia">Propia</label>
 <label class="col-xs-2 radio-inline"><input type="radio" name="tenencia" value="prestada">Prestada</label>
 <label class="col-xs-2 radio-inline"><input type="radio" name="tenencia" value="credito">A crédito</label>
 <label class="col-xs-2 radio-inline"><input type="radio" name="tenencia" value="rentada">Rentada</label>
 </div>
 </br>
+
 <label class="cols-xs-12 control-label">Área:</label>
+
 <div class="form-group">
-            
+
 <label class="col-xs-2 radio-inline"><input type="radio" name="area" value="urbana">Urbana</label>
 <label class="col-xs-2 radio-inline"><input type="radio" name="area" value="suburbana">Suburbana</label>
 <label class="col-xs-2 radio-inline"><input type="radio" name="area" value="rural">A Rural</label>
 </div>
 </br>
+
  <div class="form-group">
             <label class="cols-xs-12 control-label">Condiciones materiales del inmueble:</label>
             <div class="cols-sm-10">
@@ -1216,7 +1227,8 @@
         </div>
       </div>
     </div>
-    <!--paso 7 -->
+    
+	<!--paso 7 -->
 <div class="row setup-content" id="step-7">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -1231,7 +1243,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" name="nombrepc" required="required" class="form-control" placeholder="Ingrese el nombre de la persona" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" name="nombrepcnf" required="required" class="form-control" placeholder="Ingrese el nombre de la persona" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -1249,7 +1261,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span>
-                <input type="number"  pattern="[0-9]{10}" name="telefonopc" required="required" class="form-control" placeholder="10 dígitos" />
+                <input type="number"  pattern="[0-9]{10}" name="edadpcnf" required="required" class="form-control" placeholder="10 dígitos" />
               </div>
             </div>
 
@@ -1266,7 +1278,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
-                <select class="form-control" id="ninoName" name="ninoName">
+                <select class="form-control" id="ninoName" name="parentescopcnf">
              <option disabled selected value> -- Seleccione una opción -- </option>
   <option value="padrepc">Padre</option>
   <option value="madrepc">Madre</option>
@@ -1296,7 +1308,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" name="ocupacionpc" required="required" class="form-control" placeholder="Ingresa ocupación" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" name="ocupacionpcnf" required="required" class="form-control" placeholder="Ingresa ocupación" minlength="2" maxlength="50" />
               </div>
           </div>
 
@@ -1312,7 +1324,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" name="escolaridadpc" required="required" class="form-control" placeholder="Ingresa escolaridad" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" name="escolaridadpcnf" required="required" class="form-control" placeholder="Ingresa escolaridad" minlength="2" maxlength="50" />
               </div>
             </div>
             
@@ -1335,7 +1347,7 @@ ISSTE: <input type="checkbox" name="isste" value="">
 
 <br><br>
  
- &nbsp&nbsp&nbsp&nbsp&nbspOtra <input type="text" name="otraVivienda">
+ &nbsp&nbsp&nbsp&nbsp&nbspOtra <input type="text" name="seviciomedico">
 <br><br>
 </div>
 
@@ -1366,6 +1378,7 @@ ISSTE: <input type="checkbox" name="isste" value="">
       </div>
     </div>
     <!-- fin paso 7 -->
+	
     <!-- paso 8 -->
 <div class="row setup-content" id="step-8">
       <div class="col-xs-6 col-md-offset-3">
@@ -1413,7 +1426,7 @@ ISSTE: <input type="checkbox" name="isste" value="">
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" name="nombreperso" required="required" class="form-control" placeholder="Ingrese el nombre de la persona que atiende al niño cuando no asiste al CENDI" minlength="2" />
+                <input  maxlength="100" type="text" name="nombrepersonac" required="required" class="form-control" placeholder="Ingrese el nombre de la persona que atiende al niño cuando no asiste al CENDI" minlength="2" />
               </div>
             </div>
           </div>
@@ -1424,7 +1437,7 @@ ISSTE: <input type="checkbox" name="isste" value="">
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                <select class="form-control" id="ninoName" name="ninoName">
+                <select class="form-control" name="paentescopcnnac">
              <option disabled selected value> -- Seleccione una opción -- </option>
   <option value="padreperso">Padre</option>
   <option value="madreperso">Madre</option>
@@ -1522,7 +1535,7 @@ ISSTE: <input type="checkbox" name="isste" value="">
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
-              <textarea name="motivo" cols="50" rows="2S" placeholder="Describa el motivo de la baja del niño"></textarea>
+              <textarea name="motivobaja" cols="50" rows="2S" placeholder="Describa el motivo de la baja del niño"></textarea>
               </div>
             </div>
           </div> 
