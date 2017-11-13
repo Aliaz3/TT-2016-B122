@@ -92,7 +92,7 @@
          <!-- inicia el form fac 11 -->
     
           <!-- paso 1. Datos del niño(a) -->
-
+	<form role="form" action="/Trabajosocial/guardardatos" method="POST">
     <div class="row setup-content" id="step-1">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -114,7 +114,7 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   
-                  <input type="file" name="imagen" id="upload" value="Fotografía del niño">
+                  <input type="file" name="imagennino" id="upload" value="Fotografía del niño">
                 <script>
                   document.getElementById("upload").onchange = function() {
                   var reader = new FileReader(); //instanciamos el objeto de la api FileReader
@@ -329,6 +329,7 @@
     <!-- Termina paso 1-->
 
     <!-- Paso 2. Datos derechohabiente-->
+
     <div class="row setup-content" id="step-2">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -339,7 +340,7 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   
-                  <input type="file" name="imagen" id="upload2" value="Fotografía del Derechohabiente"/>
+                  <input type="file" name="imagenderecho" id="upload2" value="Fotografía del Derechohabiente"/>
                 <script>
                   document.getElementById("upload2").onchange = function() {
                   var reader = new FileReader(); //instanciamos el objeto de la api FileReader
@@ -543,6 +544,7 @@
       </div>
     </div><!-- Fin paso 2-->
     <!-- Inicio paso 3. Datos del padre-->
+	
     <div class="row setup-content" id="step-3">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -553,7 +555,7 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   
-                  <input type="file" name="imagen" id="upload3" value="Fotografía del Derechohabiente"/>
+                  <input type="file" name="imagenpadre" id="upload3" value="Fotografía del Derechohabiente"/>
                 <script>
                   document.getElementById("upload3").onchange = function() {
                   var reader = new FileReader(); //instanciamos el objeto de la api FileReader
@@ -748,7 +750,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="escolaridadt" name="escolaridadd" required="required" class="form-control" placeholder="Escolaridad" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="escolaridadt" name="escolaridadp" required="required" class="form-control" placeholder="Escolaridad" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -757,7 +759,7 @@
       </div>
     </div>
     <!--inicio paso 4 -->
-	    	<form role="form" action="/Trabajosocial/guardardatos" method="POST">
+	    	
     <div class="row setup-content" id="step-4">
       <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
@@ -768,7 +770,7 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   
-                  <input type="file" name="imagen" id="upload4" value="Fotografía de la persona autorizadas"/>
+                  <input type="file" name="imagenpersonaauth" id="upload4" value="Fotografía de la persona autorizadas"/>
                 <script>
                   document.getElementById("upload4").onchange = function() {
                   var reader = new FileReader(); //instanciamos el objeto de la api FileReader

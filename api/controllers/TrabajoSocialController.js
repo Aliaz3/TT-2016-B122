@@ -95,8 +95,6 @@ module.exports = {
 	guardardatos : function(req, res, next){
 		var ojb = req.allParams();
 		console.log(ojb);
-		var img=ojb.imagen.size();
-		console.log(img);
 		res.redirect('/Trabajosocial/');
 	}
 	
