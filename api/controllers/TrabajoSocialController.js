@@ -95,7 +95,19 @@ module.exports = {
 	guardardatos : function(req, res, next){
 		var ojb = req.allParams();
 		console.log(ojb);
+		console.log(ojb.ninoName);
 		res.redirect('/Trabajosocial/');
+		/*Nino.create( , function userCreated(err, user){
+			if(err) {
+				//console.log(err);
+				req.session.flash={
+					err:err
+				}
+				return res.redirect('/administrador/new');
+			}
+			//res.json(user);
+			res.redirect('/administrador/show/'+user.id);
+		});*/
 	}
 	
 };

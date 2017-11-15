@@ -99,7 +99,7 @@
           <h3>Datos del niño(a)</h3>
           
           
-          <div class="form-group col-xs-6 row-eq-height">
+          <!--<div class="form-group col-xs-6 row-eq-height">
               <label for="fecha" class="control-label">Fecha:</label>
               <div class="cols-sm-10">
                 <div class="input-group ">
@@ -107,7 +107,7 @@
                   <input type="date" class="form-control" name="fecha" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"  placeholder="dd/mm/aaaa"/>
                 </div>
               </div>
-            </div>
+            </div>-->
           <div class="form-group col-xs-6" align="center">
               <label for="fecha" id="foto" class="control-label">Fotografía del niño:</label>
               <img id="image" width="140" height="140" />
@@ -171,7 +171,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
-                <select class="form-control" id="ninoName" name="ninoName">
+                <select class="form-control" name="ninoanos">
                   <option value="default" selected disabled hidden>--Seleccione--</option>
                   <option value="ceroa">0</option>
                   <option value="unoa">1</option>
@@ -189,7 +189,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
-                <select class="form-control" id="ninoName" name="ninoName">
+                <select class="form-control" name="ninomeses">
                   <option value="default" selected disabled hidden>--Seleccione--</option>
                   <option value="cero">0</option>
                   <option value="uno">1</option>
@@ -226,7 +226,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                <select class="form-control" id="ninoName" name="ninoName">
+                <select class="form-control" name="lehermanos">
                   <option value="default" selected disabled hidden>--Seleccione--</option>
                   <option value="primero">Primero</option>
                   <option value="segundo">Segundo</option>
@@ -245,7 +245,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="calle" name="calle" required="required" class="form-control" placeholder="Calle" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="calle" name="ncalle" required="required" class="form-control" placeholder="Calle" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -254,7 +254,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="noe" name="noe" required="required" class="form-control" placeholder="No. Exterior" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="noe" name="nnoe" required="required" class="form-control" placeholder="No. Exterior" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -263,7 +263,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="noi" name="noi" class="form-control" placeholder="No. Interior" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="noi" name="nnoi" class="form-control" placeholder="No. Interior" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -272,7 +272,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="cp" name="cp" required="required" class="form-control" placeholder="C.P." minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="cp" name="ncp" required="required" class="form-control" placeholder="C.P." minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="delegacion" name="delegacion" required="required" class="form-control" placeholder="Delegación" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="delegacion" name="ndelegacion" required="required" class="form-control" placeholder="Delegación" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -291,7 +291,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="estado" name="estado" required="required" class="form-control" placeholder="Entidad Federativa" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="estado" name="nestado" required="required" class="form-control" placeholder="Entidad Federativa" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -300,7 +300,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="colonia" name="colonia" required="required" class="form-control" placeholder="Colonia" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="colonia" name="ncolonia" required="required" class="form-control" placeholder="Colonia" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -309,7 +309,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="telefono" name="telefono" required="required" class="form-control" placeholder="Teléfono" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="telefono" name="ntelefono" required="required" class="form-control" placeholder="Teléfono" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
@@ -318,7 +318,7 @@
             <div class="cols-sm-10">
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                <input  maxlength="100" type="text" id="celular" name="celular" required="required" class="form-control" placeholder="Celular" minlength="2" maxlength="50" />
+                <input  maxlength="100" type="text" id="celular" name="ncelular" required="required" class="form-control" placeholder="Celular" minlength="2" maxlength="50" />
               </div>
             </div>
           </div>
