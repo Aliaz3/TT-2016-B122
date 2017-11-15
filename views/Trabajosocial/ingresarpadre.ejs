@@ -1,0 +1,324 @@
+<div class="nav-side-menu">
+	<div class="brand">Bienvenida @TS</div>
+		<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+	        <div class="menu-list">
+	  
+	            <ul id="menu-content" class="menu-content collapse out">
+	                <li  data-toggle="collapse" data-target="#repMens" class="collapsed">
+	                  <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Reportes mensuales<span class="arrow"></span></a>
+	                </li>
+	                <ul class="sub-menu collapse" id="repMens">
+	                    <li><a href="/Trabajosocial/nuevoRepMens">Agregar reporte</a></li>
+	                    <li><a href="/Trabajosocial/ReporteMensualTS">Ver reporte</a></li>
+	                </ul>
+					<li  data-toggle="collapse" data-target="#regnino" class="collapsed">
+	                  <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Datos<span class="arrow"></span></a>
+	                </li>
+	                <ul class="sub-menu collapse" id="regnino">
+	                    <li><a href="/Trabajosocial/ingresarderechohabiente">Registrar Datos</a></li>
+						<li><a href="/Trabajosocial/ver">Ver niños</a></li>
+	                </ul>
+	                <li  data-toggle="collapse" data-target="#repD" class="collapsed">
+	                  <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Reportes diarios<span class="arrow"></span></a>
+	                </li>
+	                <ul class="sub-menu collapse" id="repD">
+	                    <li><a href="/Trabajosocial/nuevoRepDiarioTS">Agregar reporte</a></li>
+	                    <li><a href="/Trabajosocial/ReporteDiarioTS">Ver reporte</a></li>
+	                </ul>
+
+	                <li  data-toggle="collapse" data-target="#Afacs" class="collapsed">
+	                  <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Generar FAC's <span class="arrow"></span></a>
+	                </li>
+	                <ul class="sub-menu collapse" id="Afacs">
+	                	<li><a href="/Trabajosocial/FAC11">FAC 11. Estudio Socioeconómico V 03</a></li>
+	                	<li><a href="/Trabajosocial/FAC13">FAC 13. Ficha de Reinscripción</a></li>
+	                    <li><a href="/Trabajosocial/FAC14">FAC 14. Ficha de Identificación V 10</a></li>
+	                    <li><a href="/Trabajosocial/FAC130">FAC 130. Indicaciones para las Derechohabientes V 03</a></li>
+	                    <li><a href="/Trabajosocial/FAC131">FAC 131. Carta Compromiso V 04</a></li>
+	                    <li><a href="/Trabajosocial/FAC144">FAC 144. Ingreso en Trámite V00</a></li>
+	                </ul>
+	                <li  data-toggle="collapse" data-target="#Vfacs" class="collapsed">
+	                  <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver FAC's <span class="arrow"></span></a>
+	                </li>
+	                <ul class="sub-menu collapse" id="Vfacs">
+	                	<li><a href="/Trabajosocial/VFAC11">FAC 11. Estudio Socioeconómico V 03</a></li>
+	                	<li><a href="/Trabajosocial/VFAC13">FAC 13. Ficha de Reinscripción</a></li>
+	                    <li><a href="/Trabajosocial/VFAC14">FAC 14. Ficha de Identificación V 10</a></li>
+	                    <li><a href="/Trabajosocial/VFAC130">FAC 130. Indicaciones para las Derechohabientes V 03</a></li>
+	                    <li><a href="/Trabajosocial/vFAC131">FAC 131. Carta Compromiso V 04</a></li>
+	                    <li><a href="/Trabajosocial/VFAC144">FAC 144. Ingreso en Trámite V00</a></li>
+	                </ul>
+	            </ul>
+	        </div>
+	    </div>
+  <div class="container-fluid contenido">
+    <div class="row contenido-usr">
+      <h3><b>Datos del Padre.</b></h3>
+      <p class="col-xs-6 col-md-offset-2"><b>Instrucciones:</b> Favor de ingresar los campos.</p>
+      <div class="stepwizard col-md-offset-3">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step">
+              <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+              <p>Datos del Padre</p>
+            </div>
+            <div class="stepwizard-step">
+              <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+              <p>Datos del trabajo</p>
+            </div>  
+        </div>
+    </div>
+	<form role="form" action="/Trabajosocial/guardarpadre" method="POST">
+    <div class="row setup-content" id="step-1">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+          <h3>Datos del Padre</h3>
+          <div class="form-group col-xs-12" align="center">
+              <label for="fecha" id="foto" class="control-label">Fotografía del Padre:</label>
+              <img id="image" width="140" height="140" />
+              <div class="cols-sm-10">
+                <div class="input-group">
+                <input type="file" name="pfoto" id="upload" value="Fotografía del Padre">
+                <script>
+                  document.getElementById("upload").onchange = function() {
+                  var reader = new FileReader(); //instanciamos el objeto de la api FileReader
+                  reader.onload = function(e) {
+                  //en el evento onload del FileReader, asignamos el path a el src del elemento imagen de html
+                  document.getElementById("image").src = e.target.result;
+                  document.getElementById("foto").innerHTML = "";
+                  };
+                  // read the image file as a data URL.
+                  reader.readAsDataURL(this.files[0]);
+                  };
+                </script>
+                </div>
+              </div>
+            </div>
+           <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Nombre:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pnombre" name="pnombre" required="required" class="form-control" placeholder="Ingrese el nombre del Padre" minlength="2" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Apellido Paterno:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="papepaterno" name="papepaterno" required="required" class="form-control" placeholder="Ingrese Apellido Paterno" minlength="2" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Apellido Materno:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="papematerno" name="papematerno" required="required" class="form-control" placeholder="Ingrese Apellido Materno" minlength="2"  />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+              <label for="fecha" class="cols-sm-2 control-label">Lugar de nacimiento:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="plugarnacimiento" id="plugarnacimiento" required="required" placeholder="Ingrese Lugar de Nacimiento"/>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-xs-4">
+              <label for="fecha" class="cols-sm-2 control-label">Fecha de nacimiento:</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="pfnacimiento" id="pfnacimiento" required="required" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="dd/mm/aaaa"/>
+                </div>
+              </div>
+            </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Estado Civil:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <select class="form-control" id="pestadocivil" name="pestadocivil">
+                  <option value="default" selected disabled hidden>--Seleccione--</option>
+                  <option value="Soltera">Soltero</option>
+                  <option value="Casada">Casado</option>
+                  <option value="Viuda">Viudo</option>
+				  <option value="Divorciada">Divorciado</option>
+                  <option value="Union Libre">Union Libre</option>
+                  <option value="Comprometida">Comprometido</option>
+                </select>
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Escolaridad:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pescolaridad" name="pescolaridad" required="required" class="form-control" placeholder="Ingrese la ocupación" minlength="2"  />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Religión:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-child" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="preligion" name="preligion" required="required" class="form-control" placeholder="Religion" minlength="2"  />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Celular:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pcelular" name="pcelular" required="required" class="form-control" placeholder="Ingrese celular" minlength="2" />
+              </div>
+            </div>
+          </div>
+		  </br>
+		  </br>
+		  </br>
+          
+        </div>
+		<button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
+      </div>
+    </div>
+	<div class="row setup-content" id="step-2">
+      <div class="col-xs-6 col-md-offset-3">
+        <div class="col-md-12">
+		<h3>Datos del Trabajo</h3>
+		<div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Horario:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="phorariot" name="phorariot" required="required" class="form-control" placeholder="Horario de trabajo" minlength="2"  />
+              </div>
+            </div>
+          </div>
+		<div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Lugar de trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="padscripcion" name="padscripcion" required="required" class="form-control" placeholder="Lugar de trabajo" minlength="2"  />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Ocupación:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pocupacion" name="pocupacion" required="required" class="form-control" placeholder="Ocupación" minlength="2"  />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Telefono trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="ptelefonot" name="ptelefonot" required="required" class="form-control" placeholder="Ingrese telefono" minlength="2" />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">extension:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pextension" name="pextension" required="required" class="form-control" placeholder="Ingrese extension" minlength="2" />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Celular trabajo:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pcelulart" name="pcelulart" required="required" class="form-control" placeholder="Ingrese celular" minlength="2" />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-12">
+            <label class="cols-sm-2 control-label">Calle:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pcallet" name="pcallet" required="required" class="form-control" placeholder="Calle" minlength="2"  />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">No. Exterior:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pnoextt" name="pnoextt" required="required" class="form-control" placeholder="No. Exterior" minlength="2"  />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">No. Interior:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pnointt" name="pnointt" class="form-control" placeholder="No. Interior" minlength="2" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Código Postal:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pcpt" name="pcpt" required="required" class="form-control" placeholder="C.P." minlength="2" />
+              </div>
+            </div>
+          </div>
+		  <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Entidad Federativa:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pestadot" name="pestadot" required="required" class="form-control" placeholder="Entidad Federativa" minlength="2" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Delegación o Municipio:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pdelegaciont" name="pdelegaciont" required="required" class="form-control" placeholder="Delegación" minlength="2"  />
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-xs-4">
+            <label class="cols-sm-2 control-label">Colonia:</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                <input  maxlength="100" type="text" id="pcoloniat" name="pcoloniat" required="required" class="form-control" placeholder="Colonia" minlength="2" />
+              </div>
+            </div>
+          </div>
+		</div>
+		<input type="hidden" name="idnino" value="<%=  user.id %>" />
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+		<input type="submit" class="btn btn-success btn-lg pull-right" value="Guardar datos del Padre"/>
+	  </div>
+	</div>
+    
+	</form>
+	</div>
+    </div>

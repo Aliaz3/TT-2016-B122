@@ -9,6 +9,27 @@ module.exports = {
 	'index': function (req, res){
 		res.view();
 	},
+	'ingreso': function (req, res, next){
+		Derechohabiente.findOne(req.param('id'), function foundUser(err, user){
+			if (err) return next(err);
+			if (!user) return next();
+			res.view({
+				user: user
+			});
+		});
+	},
+	'ingresarderechohabiente' :function (req, res, next){
+		res.view();
+	},
+	'ingresarpadre' :function (req, res, next){
+		res.view();
+	},
+	'ingresarpautorizada' : function (req, res, next){
+		res.view();
+	},
+	'vernino': function (req, res){
+		res.view();
+	},
 	'FAC130': function (req, res){
 		res.view();
 	},
@@ -92,22 +113,69 @@ module.exports = {
 				console.log("fin");
 				res.redirect('/Trabajosocial/');
 	},
-	guardardatos : function(req, res, next){
+	guardarderechohabiente : function(req, res, next){
 		var ojb = req.allParams();
 		console.log(ojb);
-		console.log(ojb.ninoName);
-		res.redirect('/Trabajosocial/');
-		/*Nino.create( , function userCreated(err, user){
+		Derechohabiente.create( req.params.all(), function userCreated(err, user){
 			if(err) {
-				//console.log(err);
+				console.log(err);
 				req.session.flash={
 					err:err
 				}
-				return res.redirect('/administrador/new');
+				return res.redirect('/Trabajosocial/ingresarderechohabiente/');
+			}
+			console.log(json(user));
+			res.redirect('/Trabajosocial/ingreso/'+user.id);
+		});
+		//res.redirect('/Trabajosocial/ingresarderechohabiente/');
+	},
+	guardarnino : function(req, res, next){
+		var ojb = req.allParams();
+		console.log(ojb);
+		Nino.create( req.params.all(), function userCreated(err, user){
+			if(err) {
+				console.log(err);
+				req.session.flash={
+					err:err
+				}
+				return res.redirect('/Trabajosocial/ingreso/');
 			}
 			//res.json(user);
-			res.redirect('/administrador/show/'+user.id);
-		});*/
+			res.redirect('/Trabajosocial/ingresarpadre/'+user.id);
+		});
+		//res.redirect('/Trabajosocial/ingresarderechohabiente/');
+	},
+	guardarpadre : function(req, res, next){
+		var ojb = req.allParams();
+		console.log(ojb);
+		Padre.create( req.params.all(), function userCreated(err, user){
+			if(err) {
+				console.log(err);
+				req.session.flash={
+					err:err
+				}
+				return res.redirect('/Trabajosocial/ingresarpadre/');
+			}
+			//res.json(user);
+			res.redirect('/Trabajosocial/ingresarpautorizada/'+user.id);
+		});
+		//res.redirect('/Trabajosocial/ingresarderechohabiente/');
+	},
+	guardarpa : function(req, res, next){
+		var ojb = req.allParams();
+		console.log(ojb);
+		Personaautorizada.create( req.params.all(), function userCreated(err, user){
+			if(err) {
+				console.log(err);
+				req.session.flash={
+					err:err
+				}
+				return res.redirect('/Trabajosocial/ingresarpadre/');
+			}
+			//res.json(user);
+			res.redirect('/Trabajosocial/ingresarpautorizada/'+user.id);
+		});
+		//res.redirect('/Trabajosocial/ingresarderechohabiente/');
 	}
 	
 };

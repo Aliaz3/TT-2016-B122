@@ -1,90 +1,86 @@
 /**
- * Nino.js
+ * Padre.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
+
   attributes: {
-	nnombre: {
+	pnombre:{
 		type: 'string',
 		required: true
 	},
-	napepaterno:{
+	papepaterno: {
 		type: 'string',
 		required: true
 	},
-	napematerno:{
+	papematerno: {
 		type: 'string',
 		required: true
 	},
-	nfnacimiento:{
-		type: 'date',
-		required: true
+	plugarnacimiento: {
+		type: 'string'
 	},
-	nanos:{
+	pfnacimiento: {
+		type: 'date'
+	},
+	pestadocivil: {
+		type: 'string'
+	},
+	pocupacion: {
+		type: 'string'
+	},
+	padscripcion: {
+		type: 'string'
+	},
+	pescolaridad: {
+		type: 'string'
+	},
+	pcelular: {
 		type: 'integer'
 	},
-	nmeses:{
+	ptelefonot: {
 		type: 'integer'
 	},
-	ngrupoacursar:{
-		type: 'string'
-	},
-	ngrupoprocedencia:{
-		type: 'string'
-	},
-	ngrupoactual:{
-		type: 'string'
-	},
-	nlugarhermanos:{
+	pextension: {
 		type: 'integer'
 	},
-	ngruposanguineo:{
+	pcallet: {
 		type: 'string'
 	},
-	nrh:{
+	pnoextt: {
 		type: 'string'
 	},
-	ncurp:{
-		type: 'string',
-		required: true
-	},
-	ncalle:{
+	pnointt: {
 		type: 'string'
 	},
-	nnumeroext:{
+	pcoloniat: {
 		type: 'string'
 	},
-	nnumeroint:{
+	pdelegaciont: {
+		type: 'string'
+	},
+	pestadot: {
+		type: 'string'
+	},
+	pcpt: {
+		type: 'integer'
+	},
+	pcelulart: {
+		type: 'integer'
+	},
+	phorariot: {
+		type: 'string'
+	},
+	preligion: {
 		type:'string'
 	},
-	ncolonia:{
-		type:'string'
-	},
-	ndelegacion:{
-		type: 'string'
-	},
-	nestado:{
-		type: 'string'
-	},
-	ncp:{
-		type: 'integer'
-	},
-	ntelefono :{
-		type: 'integer'
-	},
-	nderecho: {
-		model:'derechohabiente',
-	},
-	npadre: {
-		model:'padre',
-	},
-	npersona: {
-		model:'personaautorizada',
-        unique: true
-	} 	
+	phijos: {
+		collection: 'nino',
+        via: 'npadre'
+	}
   }
 };
 

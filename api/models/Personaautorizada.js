@@ -1,90 +1,83 @@
 /**
- * Nino.js
+ * Personaautorizada.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
+
   attributes: {
-	nnombre: {
+	anombre:{
 		type: 'string',
 		required: true
 	},
-	napepaterno:{
+	aapepaterno: {
 		type: 'string',
 		required: true
 	},
-	napematerno:{
+	aapematerno: {
 		type: 'string',
 		required: true
 	},
-	nfnacimiento:{
-		type: 'date',
-		required: true
+	alugarnacimiento: {
+		type: 'string'
 	},
-	nanos:{
+	aparentesco: {
+		type: 'date'
+	},
+	aestadocivil: {
+		type: 'string'
+	},
+	aocupacion: {
+		type: 'string'
+	},
+	aadscripcion: {
+		type: 'string'
+	},
+	aescolaridad: {
+		type: 'string'
+	},
+	acelular: {
 		type: 'integer'
 	},
-	nmeses:{
+	atelefonot: {
 		type: 'integer'
 	},
-	ngrupoacursar:{
-		type: 'string'
-	},
-	ngrupoprocedencia:{
-		type: 'string'
-	},
-	ngrupoactual:{
-		type: 'string'
-	},
-	nlugarhermanos:{
+	aextension: {
 		type: 'integer'
 	},
-	ngruposanguineo:{
+	acallet: {
 		type: 'string'
 	},
-	nrh:{
+	anoextt: {
 		type: 'string'
 	},
-	ncurp:{
-		type: 'string',
-		required: true
-	},
-	ncalle:{
+	anointt: {
 		type: 'string'
 	},
-	nnumeroext:{
+	acoloniat: {
 		type: 'string'
 	},
-	nnumeroint:{
-		type:'string'
-	},
-	ncolonia:{
-		type:'string'
-	},
-	ndelegacion:{
+	adelegaciont: {
 		type: 'string'
 	},
-	nestado:{
+	aestadot: {
 		type: 'string'
 	},
-	ncp:{
+	acpt: {
 		type: 'integer'
 	},
-	ntelefono :{
+	acelulart: {
 		type: 'integer'
 	},
-	nderecho: {
-		model:'derechohabiente',
+	ahorariot: {
+		type: 'string'
 	},
-	npadre: {
-		model:'padre',
-	},
-	npersona: {
-		model:'personaautorizada',
-        unique: true
-	} 	
+	anino: {
+		collection:'nino',
+        via: 'npersona'
+	}
   }
 };
 
