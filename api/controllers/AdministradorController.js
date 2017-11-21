@@ -10,6 +10,9 @@ module.exports = {
 	'new': function (req, res){
 		res.view();
 	},
+	'video': function (req,res){
+		res.view();
+	},
 	
 	create : function (req, res, next){
 		Administrador.create( req.params.all(), function userCreated(err, user){

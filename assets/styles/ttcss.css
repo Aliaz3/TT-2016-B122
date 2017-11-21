@@ -406,6 +406,44 @@ code {
   display: -ms-flexbox;
   display:         flex;
 }
+#player {
+        width: 320px;
+        height: 240px;
+      }
 =======
 }
 >>>>>>> 52293624073f8b1afa0a589334eaa36d5538c86e
+#video_preview{
+    text-align: center;
+}
+#player, #player_wrapper{
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+    margin-top: 60px !important;    
+}
+input#stream_url{
+    background: none;
+    border: 2px solid #92d07f;
+    outline: none;
+    padding: 5px 10px;
+    font: 18px arial;
+    color: #666;
+    width: 600px;
+    text-align: center;
+}
+#btn_start, #btn_stop{
+    padding: 8px 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font: normal 16px arial;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#btn_start{
+    background: #3bbe13;    
+}
+#btn_stop{
+    background: #e6304f;   
+}
