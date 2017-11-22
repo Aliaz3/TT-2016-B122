@@ -1,4 +1,4 @@
-COMENTARIOS GENERALES
+﻿COMENTARIOS GENERALES
 -Renombrar vistas a nombres cortos sin caracteres especiales ni espacios
 COMENTARIOS ESPECIFICOS
 AdminiListadoPadre
@@ -23,4 +23,4 @@ BienvenidaAdmin
 AdmiListadoPersonaAutoriada
 -mismos comentarios de de padre 
 AdmiListadoNiños
--mismos comentarios de padre
+-mismos comentarios de padrea
